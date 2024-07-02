@@ -14,7 +14,7 @@ import {
   Support,
 } from "./utils/images";
 import { useState } from "react";
-import { destinationData, recommendedCardData, routesData } from "./utils/data";
+import { destinationData, recommendedCardData, reviewsData, routesData } from "./utils/data";
 import {
   DestinationCard,
   CallModal,
@@ -32,9 +32,6 @@ import {
   Gallery5,
 } from "./utils/images";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faQuoteLeft, faStar, faStarHalfAlt } from '@fortawesome/free-solid-svg-icons';
-
 const Home = () => {
   const [show, setShow] = useState<boolean>(false);
 
@@ -48,7 +45,7 @@ const Home = () => {
         <div className="head-wrapper">
           <div
             className="search-engine"
-            // style={{ backgroundImage: `url(${bannerImage1.src})` }}
+          // style={{ backgroundImage: `url(${bannerImage1.src})` }}
           >
             <video autoPlay loop muted>
               <source src="/flight_video1.mp4" type="video/mp4" />
@@ -75,7 +72,7 @@ const Home = () => {
                   >
                     <span className="fw-bold"> Call Now</span>
                   </button>
-                 {/* <PaymentMethod /> */}
+                  {/* <PaymentMethod /> */}
                 </div>
               </div>
               {/* <SearchEngine handleToggle={handleToggle} /> */}
@@ -116,7 +113,7 @@ const Home = () => {
                 className="h-100 w-100 object-cover"
               />
             </div>
-            <div className="p-3 d-flex align-items-end align-items-xl-center justify-content-center flex-column w-100 w-md-50">
+            <div className="p-3 d-flex align-items-end align-items-xl-center flex-column w-100 w-md-50">
               <div>
                 <div className="row">
                   <div className="col-12 text-center mb-3">
@@ -148,7 +145,7 @@ const Home = () => {
       <section className="step-container">
         <div className="py-4 container">
           <div className="d-flex flex-column flex-md-row mb-0 w-100 container-xl mx-auto gap-4">
-            <div className="p-3 d-flex align-items-end align-items-xl-center justify-content-center flex-column w-100 w-md-50">
+            <div className="p-3 d-flex align-items-end align-items-xl-center flex-column w-100 w-md-50">
               <div>
                 <div className="row">
                   <div className="col-12 text-center mb-3">
@@ -516,73 +513,34 @@ const Home = () => {
         </div>
       </section>
       {/* review */}
-          <section>
-            <div className='container'>
-      <div className="row d-flex justify-content-center">
-        <div className="col-md-10 col-xl-8 text-center mt-4 mb-4">
-          <h4 className="fs-2 fw-bold theme-text-secondary mb-0">Review</h4>
-        </div>
-      </div>
-            <div className="row text-center">
-              <div className="col-md-4 mb-5 mb-md-0">
-                <div className="d-flex justify-content-center mb-4">
-                  {/* <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp"
-                    className="rounded-circle shadow-1-strong" width="150" height="150" /> */}
-                </div>
-                <h5 className="mb-3">Vicente Wolf</h5>
-                
-                <p className="px-xl-3">
-                  <FontAwesomeIcon icon={faQuoteLeft} className="pe-2" /> It was really easy to book my flight with reservationkart Flight Services! The website was easy to use, and I quickly located some excellent discounts. Customer service was nice and responsive the entire time. I was satisfied with the smooth experience and strongly recommend reservationkart for their effective and reasonably priced reservation services.
-                </p>
-                <ul className="list-unstyled d-flex justify-content-center mb-0">
-                  <li><FontAwesomeIcon icon={faStar} className="fa-sm text-warning" /></li>
-                  <li><FontAwesomeIcon icon={faStar} className="fa-sm text-warning" /></li>
-                  <li><FontAwesomeIcon icon={faStar} className="fa-sm text-warning" /></li>
-                  <li><FontAwesomeIcon icon={faStar} className="fa-sm text-warning" /></li>
-                  <li><FontAwesomeIcon icon={faStarHalfAlt} className="fa-sm text-warning" /></li>
-                </ul>
-              </div>
-
-              <div className="col-md-4 mb-5 mb-md-0">
-                <div className="d-flex justify-content-center mb-4">
-                  {/* <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(2).webp"
-                    className="rounded-circle shadow-1-strong" width="150" height="150" /> */}
-                </div>
-                <h5 className="mb-3">Patricia Ferris</h5>
-               
-                <p className="px-xl-3">
-                  <FontAwesomeIcon icon={faQuoteLeft} className="pe-2" /> The reservation card provides outstanding services at the best possible rates. It's the greatest option for travelers on a tight budget because of its easy booking process, helpful customer service, and dependable service. Excellent experiences without the high cost, ensuring that your travels are both economical and pleasurable. Highly recommended.
-                </p>
-                <ul className="list-unstyled d-flex justify-content-center mb-4">
-                  <li><FontAwesomeIcon icon={faStar} className="fa-sm text-warning" /></li>
-                  <li><FontAwesomeIcon icon={faStar} className="fa-sm text-warning" /></li>
-                  <li><FontAwesomeIcon icon={faStar} className="fa-sm text-warning" /></li>
-                  <li><FontAwesomeIcon icon={faStar} className="fa-sm text-warning" /></li>
-                  <li><FontAwesomeIcon icon={faStar} className="fa-sm text-warning" /></li>
-                </ul>
-              </div>
-
-              <div className="col-md-4 mb-0">
-                <div className="d-flex justify-content-center mb-4">
-                  {/* <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(9).webp"
-                    className="rounded-circle shadow-1-strong" width="150" height="150" /> */}
-                </div>
-                <h5 className="mb-3">Steven Wills</h5>
-                
-                <p className="px-xl-3">
-                  <FontAwesomeIcon icon={faQuoteLeft} className="pe-2" /> I highly recommend Reservation Card for their outstanding service at unbeatable prices. They offer exceptional value with their efficient and friendly customer support. The booking process is seamless, and the affordability without compromising on quality is impressive. Great choice for budget-conscious travelers seeking the best service.
-                </p>
-                <ul className="list-unstyled d-flex justify-content-center mb-4">
-                  <li><FontAwesomeIcon icon={faStar} className="fa-sm text-warning" /></li>
-                  <li><FontAwesomeIcon icon={faStar} className="fa-sm text-warning" /></li>
-                  <li><FontAwesomeIcon icon={faStar} className="fa-sm text-warning" /></li>
-                  <li><FontAwesomeIcon icon={faStar} className="fa-sm text-warning" /></li>
-                  <li><FontAwesomeIcon icon={faStarHalfAlt} className="fa-sm text-warning" /></li>
-                </ul>
-              </div>
+      <section className="my-4" id="reviews">
+        <div className='container'>
+          <div className="row">
+            <div className="col-12 text-center mb-5">
+              <h4 className="fs-2 fw-bold theme-text-secondary mb-0">Hear From Our Happy Customers</h4>
+              <p className="mb-0 theme-text-accent-one">
+                Discover what makes our service exceptional through real customer experiences
+              </p>
             </div>
           </div>
-    </section>
+          <div className="row">
+            {reviewsData.map((review, index) => (
+              <div className="col-md-4 mb-5 mb-md-0" key={index}>
+                <h5 className="fw-bold mb-0">{review.name}</h5>
+                <ul className="list-unstyled d-flex gap-1">
+                  {[...Array(Math.floor(review.rating))].map((_, i) => (
+                    <li key={i}><i className="fa-sm text-warning bi bi-star-fill" /></li>
+                  ))}
+                  {review.rating % 1 !== 0 && <li><i className="fa-sm text-warning bi bi-star-half" /></li>}
+                </ul>
+                <p className="mt-2">
+                  <i className="bi bi-quote" /> {review.review}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
       { /* call us modal */}
       <CallModal show={show} handleClose={handleToggle} setShow={setShow} />
     </main>
