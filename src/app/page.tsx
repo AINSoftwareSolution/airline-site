@@ -32,6 +32,9 @@ import {
   Gallery5,
 } from "./utils/images";
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faQuoteLeft, faStar, faStarHalfAlt } from '@fortawesome/free-solid-svg-icons';
+
 const Home = () => {
   const [show, setShow] = useState<boolean>(false);
 
@@ -72,7 +75,7 @@ const Home = () => {
                   >
                     <span className="fw-bold"> Call Now</span>
                   </button>
-                  <PaymentMethod />
+                 {/* <PaymentMethod /> */}
                 </div>
               </div>
               {/* <SearchEngine handleToggle={handleToggle} /> */}
@@ -512,8 +515,75 @@ const Home = () => {
           </div>
         </div>
       </section>
+      {/* review */}
+          <section>
+            <div className='container'>
+      <div className="row d-flex justify-content-center">
+        <div className="col-md-10 col-xl-8 text-center mt-4 mb-4">
+          <h4 className="fs-2 fw-bold theme-text-secondary mb-0">Review</h4>
+        </div>
+      </div>
+            <div className="row text-center">
+              <div className="col-md-4 mb-5 mb-md-0">
+                <div className="d-flex justify-content-center mb-4">
+                  {/* <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp"
+                    className="rounded-circle shadow-1-strong" width="150" height="150" /> */}
+                </div>
+                <h5 className="mb-3">Vicente Wolf</h5>
+                
+                <p className="px-xl-3">
+                  <FontAwesomeIcon icon={faQuoteLeft} className="pe-2" /> It was really easy to book my flight with reservationkart Flight Services! The website was easy to use, and I quickly located some excellent discounts. Customer service was nice and responsive the entire time. I was satisfied with the smooth experience and strongly recommend reservationkart for their effective and reasonably priced reservation services.
+                </p>
+                <ul className="list-unstyled d-flex justify-content-center mb-0">
+                  <li><FontAwesomeIcon icon={faStar} className="fa-sm text-warning" /></li>
+                  <li><FontAwesomeIcon icon={faStar} className="fa-sm text-warning" /></li>
+                  <li><FontAwesomeIcon icon={faStar} className="fa-sm text-warning" /></li>
+                  <li><FontAwesomeIcon icon={faStar} className="fa-sm text-warning" /></li>
+                  <li><FontAwesomeIcon icon={faStarHalfAlt} className="fa-sm text-warning" /></li>
+                </ul>
+              </div>
 
-      {/* call us modal */}
+              <div className="col-md-4 mb-5 mb-md-0">
+                <div className="d-flex justify-content-center mb-4">
+                  {/* <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(2).webp"
+                    className="rounded-circle shadow-1-strong" width="150" height="150" /> */}
+                </div>
+                <h5 className="mb-3">Patricia Ferris</h5>
+               
+                <p className="px-xl-3">
+                  <FontAwesomeIcon icon={faQuoteLeft} className="pe-2" /> The reservation card provides outstanding services at the best possible rates. It's the greatest option for travelers on a tight budget because of its easy booking process, helpful customer service, and dependable service. Excellent experiences without the high cost, ensuring that your travels are both economical and pleasurable. Highly recommended.
+                </p>
+                <ul className="list-unstyled d-flex justify-content-center mb-4">
+                  <li><FontAwesomeIcon icon={faStar} className="fa-sm text-warning" /></li>
+                  <li><FontAwesomeIcon icon={faStar} className="fa-sm text-warning" /></li>
+                  <li><FontAwesomeIcon icon={faStar} className="fa-sm text-warning" /></li>
+                  <li><FontAwesomeIcon icon={faStar} className="fa-sm text-warning" /></li>
+                  <li><FontAwesomeIcon icon={faStar} className="fa-sm text-warning" /></li>
+                </ul>
+              </div>
+
+              <div className="col-md-4 mb-0">
+                <div className="d-flex justify-content-center mb-4">
+                  {/* <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(9).webp"
+                    className="rounded-circle shadow-1-strong" width="150" height="150" /> */}
+                </div>
+                <h5 className="mb-3">Steven Wills</h5>
+                
+                <p className="px-xl-3">
+                  <FontAwesomeIcon icon={faQuoteLeft} className="pe-2" /> I highly recommend Reservation Card for their outstanding service at unbeatable prices. They offer exceptional value with their efficient and friendly customer support. The booking process is seamless, and the affordability without compromising on quality is impressive. Great choice for budget-conscious travelers seeking the best service.
+                </p>
+                <ul className="list-unstyled d-flex justify-content-center mb-4">
+                  <li><FontAwesomeIcon icon={faStar} className="fa-sm text-warning" /></li>
+                  <li><FontAwesomeIcon icon={faStar} className="fa-sm text-warning" /></li>
+                  <li><FontAwesomeIcon icon={faStar} className="fa-sm text-warning" /></li>
+                  <li><FontAwesomeIcon icon={faStar} className="fa-sm text-warning" /></li>
+                  <li><FontAwesomeIcon icon={faStarHalfAlt} className="fa-sm text-warning" /></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+    </section>
+      { /* call us modal */}
       <CallModal show={show} handleClose={handleToggle} setShow={setShow} />
     </main>
   );
