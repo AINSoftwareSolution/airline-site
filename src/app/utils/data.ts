@@ -167,3 +167,22 @@ export const contactInitialValues ={
  phone:'',
  message:''
 }
+
+
+export const reviewsData = [
+  {
+    name: "Vicente Wolf",
+    rating: 4.5,
+    review: "It was really easy to book my flight with reservationkart Flight Services! The website was easy to use, and I quickly located some excellent discounts. Customer service was nice and responsive the entire time."
+  },
+  {
+    name: "Patricia Ferris",
+    rating: 4.5,
+    review: "The reservationkart provides outstanding services at the best possible rates. Excellent experiences without the high cost, ensuring that your travels are both economical and pleasurable. Highly recommended."
+  },
+  {
+    name: "Steven Wills",
+    rating: 5,
+    review: "I highly recommend reservationkart for their outstanding service at unbeatable prices. They offer exceptional value with their efficient and friendly customer support. Great choice for budget-conscious travelers seeking the best service."
+  }
+];
