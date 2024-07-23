@@ -111,7 +111,7 @@ const Footer = () => {
               <div className="flex-grow-1">
                 Location <br />
                 <address className="text-muted">
-                  30 Summer St, Hagerstown Maryland 21740 USA.
+                  30 Summer St, Hagerstown, Maryland 21740 USA.
                 </address>
               </div>
               <div className="flex-grow-1">
