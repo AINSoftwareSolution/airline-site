@@ -1211,8 +1211,130 @@ button.btn {
     background: linear-gradient(180deg, rgba(3, 147, 210, 0.3281687675) 0%, rgba(0, 0, 0, 0.762342437) 100%);
 } */
  
+/* offers */
 
+/* ===== Buttons Css ===== */
+.offers .contact-form .single-form .input-form .primary-btn {
+  background: var(--primary);
+  color: var(--white);
+  box-shadow: var(--shadow-2);
+}
+.offers .contact-form .single-form .input-form .active.primary-btn, .offers .contact-form .single-form .input-form .primary-btn:hover, .offers .contact-form .single-form .input-form .primary-btn:focus {
+  background: var(--primary-dark);
+  color: var(--white);
+  box-shadow: var(--shadow-4);
+}
+.offers .contact-form .single-form .input-form .deactive.primary-btn {
+  background: var(--gray-4);
+  color: var(--dark-3);
+  pointer-events: none;
+}
 
+/*===========================
+    contact-01 css 
+===========================*/
+.offers .contact-area {
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+.offers .contact-area .mt-15 {
+  margin-top: 15px;
+}
+.offers .contact-area .section-title .title {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 55px;
+}
+@media (max-width: 767px) {
+  .offers .contact-area .section-title .title {
+    font-size: 24px;
+    line-height: 35px;
+  }
+}
+
+.offers .contact-info ul li .single-info .info-icon {
+  position: absolute;
+
+}
+.offers .contact-info ul li .single-info .info-icon i {
+  color: var(--dark-3);
+  font-size: 18px;
+  line-height: 24px;
+}
+.offers .contact-info ul li .single-info .info-content {
+  padding-left: 30px;
+}
+.offers .contact-info ul li .single-info .info-content .text {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--dark-3);
+  font-weight: 500;
+}
+.offers .contact-info .social li {
+  display: inline-block;
+  margin-right: 12px;
+}
+.offers .contact-info .social li a {
+  font-size: 20px;
+  height: 40px;
+  width: 40px;
+  line-height: 38px;
+  border: 1px solid rgba(0, 0, 0, 0.096);
+  text-align: center;
+  border-radius: 5px;
+  color: var(--dark-3);
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+}
+.offers .contact-info .social li a:hover {
+  color: var(--white);
+  background-color: var(--primary);
+  border-color: transparent;
+}
+
+.static-slider10 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+	padding: 10% 0;
+  background-size: cover;
+  background-position: center center;
+}
+.static-slider10 .title {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 50px;
+}
+
+.static-slider10 .subtitle {
+    line-height: 24px;
+}
+
+@media (max-width: 900px) {
+  .static-slider10 .title {
+    font-size: 40px;
+    line-height: 45px;
+  }
+}
+
+.static-slider10 .btn-md {
+    padding: 15px 45px;
+    font-size: 16px;
+}
+
+.static-slider10 .badge {
+	line-height: 21px;
+}
+
+.static-slider10 .badge-inverse {
+	background: #3e4555;
+}
+
+.static-slider10 .op-8 {
+	opacity: 0.8;
+}
 
 
 

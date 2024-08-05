@@ -9,9 +9,7 @@ const Header = () => {
   const [collapsed, setCollapsed] = useState(true);
   const path = usePathname()
 
-  if(path == '/offers'){
-   return null
-  }
+ 
 
   const toggleNavbar = () => {
     setCollapsed(!collapsed);
