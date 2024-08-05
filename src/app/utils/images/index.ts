@@ -1,5 +1,4 @@
-import bannerImage from "./section/banner-image.png";
-import bannerImage1 from "./banner_image.jpg";
+import bannerImage from "./section/bg-pic.png";
 import Product01 from "./section/product-banner01.png";
 import Product02 from "./section/product-banner02.png";
 import PopupBg from './section/popup-bg.png'
@@ -57,12 +56,8 @@ import Advantage3 from "./about-us/advantages3.jpg";
 import Advantage4 from "./about-us/advantages4.jpg";
 
 
-
-
-
 export {
   bannerImage,
-  bannerImage1,
   experienceBg,
   Product01,
   Product02,
