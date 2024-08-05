@@ -55,6 +55,13 @@ import Advantage2 from "./about-us/advantages2.jpg";
 import Advantage3 from "./about-us/advantages3.jpg";
 import Advantage4 from "./about-us/advantages4.jpg";
 
+//Landing Page//
+import AboutImage from "./offers/landingPage-Img.webp";
+import FlightImg from "./offers/Image1.png"
+import HotelImg from "./offers/Image2.png";
+import TravelGuideImg from "./offers/Image3.png";
+import TripIMg from "./offers/Image4.png";
+
 
 export {
   bannerImage,
@@ -105,4 +112,9 @@ export {
   LowestImg,
   ExcImg,
   Support,
+  AboutImage,
+  FlightImg,
+  HotelImg,
+  TravelGuideImg,
+  TripIMg
 };
