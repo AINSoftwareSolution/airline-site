@@ -2,10 +2,17 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import { FooterLogo, Logo, PCCiIcon } from "../utils/images";
 
 const Header = () => {
   const [collapsed, setCollapsed] = useState(true);
+  const path = usePathname()
+
+  if(path == '/offers'){
+   return null
+  }
+
   const toggleNavbar = () => {
     setCollapsed(!collapsed);
   };

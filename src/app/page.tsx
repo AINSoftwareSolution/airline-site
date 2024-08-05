@@ -82,22 +82,7 @@ const Home = () => {
         {/*   <NewsLetter  /> */}
       </div>
 
-      {/* <!-- recommended section --> */}
-      {/* <section className="recommended" id="deals">
-        <div className="container">
-          <div className="row">
-            <div className="col-12 col-lg-6">
-              <h4 className="fs-2 fw-bold theme-text-secondary mb-0">Recommended</h4>
-              <p className="mb-0 theme-text-accent-one">International & Domestic fames ac ante ipsum</p>
-            </div>
-          </div>
-          <div className="row mt-5">
-            {recommendedCardData?.map((card, index) => (
-              <RecommendedCard card={card} key={index} />
-            ))}
-          </div>
-        </div>
-      </section>  */}
+
 
       <section className="pt-5 pt-lg-5 step-container">
         <div className="pb-md-4 mt-4 container">
