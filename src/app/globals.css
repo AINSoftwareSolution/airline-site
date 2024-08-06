@@ -1214,76 +1214,6 @@ button.btn {
 
 /* Landing Pages */
 
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-h2 {
-  font-weight: bold;
-}
-
-.number {
-  display: inline-block;
-  font-size: 1.5em;
-  font-weight: bold;
-  margin-right: 0.5em;
-  padding: 0.2em 0.6em;
-  border-radius: 50%;
-  color: white;
-}
-
-.number-blue {
-  background-color: #1e3a8a;
-}
-
-.number-orange {
-  background-color: #f97316;
-}
-
-.number-light-orange {
-  background-color: #fbbf24;
-}
-
-.image-group {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.rounded-image {
-  border-radius: 25%;
-  width: 100%;
-  height: 100%;
-}
-
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.mb-4 {
-  margin-bottom: 1.5rem !important;
-}
-
-
-
-
-/* landing page  */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-h2 {
-  font-weight: bold;
-}
-
 .number {
   display: inline-block;
   font-size: 1.25em; /* Adjusted font size for responsiveness */
@@ -1320,17 +1250,9 @@ h2 {
   height: auto;
 }
 
-.text-center {
-  text-align: center;
-}
 
-.mb-4 {
-  margin-bottom: 1.5rem !important;
-}
 
-.mb-5 {
-  margin-bottom: 3rem !important;
-}
+
 
 .lead {
   font-size: 1.1em;
