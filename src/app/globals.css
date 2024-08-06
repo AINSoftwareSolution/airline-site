@@ -1212,6 +1212,51 @@ button.btn {
 } */
  
 
+/* Landing Pages */
+
+.number {
+  display: inline-block;
+  font-size: 1.25em; /* Adjusted font size for responsiveness */
+  font-weight: bold;
+  margin-right: 0.5em;
+  padding: 0.3em 0.7em;
+  border-radius: 50%;
+  color: white;
+  margin-bottom: 0.5em;
+}
+
+.number-blue {
+  background-color: #1e3a8a;
+}
+
+.number-orange {
+  background-color: #f97316;
+}
+
+.number-light-orange {
+  background-color: #fbbf24;
+}
+
+.image-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.rounded-image {
+  border-radius: 25%;
+  width: 100%;
+  height: auto;
+}
+
+
+
+
+
+.lead {
+  font-size: 1.1em;
+}
 
 
 /*# sourceMappingURL=main.css.map */
