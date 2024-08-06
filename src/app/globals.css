@@ -1211,131 +1211,130 @@ button.btn {
     background: linear-gradient(180deg, rgba(3, 147, 210, 0.3281687675) 0%, rgba(0, 0, 0, 0.762342437) 100%);
 } */
  
-/* offers */
 
-/* ===== Buttons Css ===== */
-.offers .contact-form .single-form .input-form .primary-btn {
-  background: var(--primary);
-  color: var(--white);
-  box-shadow: var(--shadow-2);
-}
-.offers .contact-form .single-form .input-form .active.primary-btn, .offers .contact-form .single-form .input-form .primary-btn:hover, .offers .contact-form .single-form .input-form .primary-btn:focus {
-  background: var(--primary-dark);
-  color: var(--white);
-  box-shadow: var(--shadow-4);
-}
-.offers .contact-form .single-form .input-form .deactive.primary-btn {
-  background: var(--gray-4);
-  color: var(--dark-3);
-  pointer-events: none;
+/* Landing Pages */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/*===========================
-    contact-01 css 
-===========================*/
-.offers .contact-area {
-  padding-top: 50px;
-  padding-bottom: 100px;
-}
-.offers .contact-area .mt-15 {
-  margin-top: 15px;
-}
-.offers .contact-area .section-title .title {
-  font-size: 28px;
-  font-weight: 600;
-  line-height: 55px;
-}
-@media (max-width: 767px) {
-  .offers .contact-area .section-title .title {
-    font-size: 24px;
-    line-height: 35px;
-  }
+h2 {
+  font-weight: bold;
 }
 
-.offers .contact-info ul li .single-info .info-icon {
-  position: absolute;
-
-}
-.offers .contact-info ul li .single-info .info-icon i {
-  color: var(--dark-3);
-  font-size: 18px;
-  line-height: 24px;
-}
-.offers .contact-info ul li .single-info .info-content {
-  padding-left: 30px;
-}
-.offers .contact-info ul li .single-info .info-content .text {
-  font-size: 16px;
-  line-height: 24px;
-  color: var(--dark-3);
-  font-weight: 500;
-}
-.offers .contact-info .social li {
+.number {
   display: inline-block;
-  margin-right: 12px;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-right: 0.5em;
+  padding: 0.2em 0.6em;
+  border-radius: 50%;
+  color: white;
 }
-.offers .contact-info .social li a {
-  font-size: 20px;
-  height: 40px;
-  width: 40px;
-  line-height: 38px;
-  border: 1px solid rgba(0, 0, 0, 0.096);
+
+.number-blue {
+  background-color: #1e3a8a;
+}
+
+.number-orange {
+  background-color: #f97316;
+}
+
+.number-light-orange {
+  background-color: #fbbf24;
+}
+
+.image-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.rounded-image {
+  border-radius: 25%;
+  width: 100%;
+  height: 100%;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem !important;
+}
+
+
+
+
+/* landing page  */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+.number {
+  display: inline-block;
+  font-size: 1.25em; /* Adjusted font size for responsiveness */
+  font-weight: bold;
+  margin-right: 0.5em;
+  padding: 0.3em 0.7em;
+  border-radius: 50%;
+  color: white;
+  margin-bottom: 0.5em;
+}
+
+.number-blue {
+  background-color: #1e3a8a;
+}
+
+.number-orange {
+  background-color: #f97316;
+}
+
+.number-light-orange {
+  background-color: #fbbf24;
+}
+
+.image-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.rounded-image {
+  border-radius: 25%;
+  width: 100%;
+  height: auto;
+}
+
+.text-center {
   text-align: center;
-  border-radius: 5px;
-  color: var(--dark-3);
-  -webkit-transition: all 0.3s ease-out 0s;
-  -moz-transition: all 0.3s ease-out 0s;
-  -ms-transition: all 0.3s ease-out 0s;
-  -o-transition: all 0.3s ease-out 0s;
-  transition: all 0.3s ease-out 0s;
-}
-.offers .contact-info .social li a:hover {
-  color: var(--white);
-  background-color: var(--primary);
-  border-color: transparent;
 }
 
-.static-slider10 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 300;
-	padding: 10% 0;
-  background-size: cover;
-  background-position: center center;
-}
-.static-slider10 .title {
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 50px;
+.mb-4 {
+  margin-bottom: 1.5rem !important;
 }
 
-.static-slider10 .subtitle {
-    line-height: 24px;
+.mb-5 {
+  margin-bottom: 3rem !important;
 }
 
-@media (max-width: 900px) {
-  .static-slider10 .title {
-    font-size: 40px;
-    line-height: 45px;
-  }
+.lead {
+  font-size: 1.1em;
 }
-
-.static-slider10 .btn-md {
-    padding: 15px 45px;
-    font-size: 16px;
-}
-
-.static-slider10 .badge {
-	line-height: 21px;
-}
-
-.static-slider10 .badge-inverse {
-	background: #3e4555;
-}
-
-.static-slider10 .op-8 {
-	opacity: 0.8;
-}
-
 
 
 /*# sourceMappingURL=main.css.map */
