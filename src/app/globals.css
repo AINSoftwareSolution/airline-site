@@ -1211,7 +1211,65 @@ button.btn {
     background: linear-gradient(180deg, rgba(3, 147, 210, 0.3281687675) 0%, rgba(0, 0, 0, 0.762342437) 100%);
 } */
  
+/* offers */
+.offers .section__header {
+  text-align: center;
+  font-size: 3rem;
+  line-height: 4rem;
+  font-weight: 600;
+  color: #0f172a;
+}
 
+.offers .section__container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 5rem 1rem;
+}
+
+
+.offers .memories__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+
+
+.offers .memories {
+  background-color: #f1f5f9;
+}
+
+.offers .memories h2{
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 3rem;
+    color: #0f172a;
+}
+
+.offers .card-custom {
+  padding: 3rem 2rem;
+  text-align: center;
+  border-radius: 5rem;
+  background-color: #ffffff;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.05);
+}
+
+.offers .card-custom  .icon-circle {
+  display: inline-block;
+  padding: 20px 32px;
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  color: #fff;
+  border-radius: 100%;
+}
+
+.offers  h4{
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #0f172a;
+}
 
 
 /*# sourceMappingURL=main.css.map */
