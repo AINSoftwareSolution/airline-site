@@ -12,10 +12,6 @@ import Link from "next/link";
 const Offers = () => {
     const router = useRouter()
 
-    // const [toggle, setToggle] = useState(false);  // Add a state variable
-
-    // const handleToggle = () => {
-    //     setToggle(!toggle);
 
     const formik = useFormik({
         initialValues: contactInitialValues,
@@ -55,21 +51,13 @@ const Offers = () => {
                 <div className="container">
                     <div className="row justify-content-center ">
                         <div className="col-md-8 align-self-center text-center">
-                            <span className="badge rounded-pill badge-inverse text-white font-weight-light px-3 py-1">Creating Brands</span>
+                            {/* <span className="badge rounded-pill badge-inverse text-white font-weight-light px-3 py-1">Creating Brands</span> */}
                             <h1 className="my-3 title text-white text-uppercase"> Your Journey, Our Priority</h1>
                             <h6 className="text-white font-weight-normal op-8">Find affordable flights with ease at Reservationkart.com. Book now and fly stress-free!</h6>
                           
                    <button type="submit" className="btn btn-search mt-4 mb-6" disabled={isSubmitting}>
                    <span className="fw-bold"> Call Now</span> </button>  
 
-{/* 
-     <button
-                    type="submit"
-                    className="btn btn-search mt-4 mb-6 me-2"
-                    onClick={handleToggle}
-                  >
-                    <span className="fw-bold"> Call Now</span>
-                  </button> */}
                         </div>
                     </div>
                 </div>
@@ -173,15 +161,12 @@ const Offers = () => {
     </div>
 </section>
 
-
-
-
             {/* contact us */}
             <section className="contact-area" id="contact">
                 <div className="container">
                     <div className="row">
                         <div className="col-xl-7 col-lg-8">
-                            <div className="section-title mt-45">
+                            <div className="section-title mt-5">
                                 <h3 className="title">Ready For Unforgatable Travel. Remember Us!</h3>
                             </div>
 
