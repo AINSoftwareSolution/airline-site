@@ -42,9 +42,9 @@ const Offers = () => {
             catch (error) {
                 setSubmitting(false)
             }
-         
+
         },
-        
+
     });
 
     const { handleChange, errors, handleSubmit, isSubmitting } = formik;
@@ -55,21 +55,12 @@ const Offers = () => {
                 <div className="container">
                     <div className="row justify-content-center ">
                         <div className="col-md-8 align-self-center text-center">
-                            <span className="badge rounded-pill badge-inverse text-white font-weight-light px-3 py-1">Creating Brands</span>
                             <h1 className="my-3 title text-white text-uppercase"> Your Journey, Our Priority</h1>
                             <h6 className="text-white font-weight-normal op-8">Find affordable flights with ease at Reservationkart.com. Book now and fly stress-free!</h6>
-                          
-                   <button type="submit" className="btn btn-search mt-4 mb-6" disabled={isSubmitting}>
-                   <span className="fw-bold"> Call Now</span> </button>  
 
-{/* 
-     <button
-                    type="submit"
-                    className="btn btn-search mt-4 mb-6 me-2"
-                    onClick={handleToggle}
-                  >
-                    <span className="fw-bold"> Call Now</span>
-                  </button> */}
+                            <button type="submit" className="btn btn-search mt-4 mb-6" disabled={isSubmitting}>
+                                <span className="fw-bold"> Call Now</span>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -77,111 +68,111 @@ const Offers = () => {
 
             {/* About Sec Start */}
 
-            <section className="pt-5 pt-lg-5 step-container bg-light">
-    <div className="pb-md-4 mt-4 container">
-        <div className="d-flex flex-column flex-md-row mb-0 w-100 mx-auto container-xl gap-4">
-            <div className="w-100 w-md-50 max-h-330 p-0 rounded overflow-hidden">
-                <Image
-                    src={AboutImage}
-                    alt="about image"
-                    title="About"
-                    layout="responsive"
-                    width={200}
-                    height={130}
-                    className="h-100 w-100 object-cover"
-                />
-            </div>
-            <div className="p-3 d-flex align-items-end align-items-xl-center flex-column w-100 w-md-50 justify-content-center">
-                <div className="text-center text-md-start">
-                    <div className="row">
-                        <div className="col-12 mb-3">
-                            <h4 className="fs-2 fw-bold theme-text-secondary mb-0">
-                                Time To Travel
-                            </h4>
+            <section className="pt-5 pt-lg-5 step-container">
+                <div className="pb-md-4 mt-4 container">
+                    <div className="d-flex flex-column flex-md-row mb-0 w-100 mx-auto container-xl gap-4">
+                        <div className="w-100 w-md-50 max-h-330 p-0 rounded overflow-hidden">
+                            <Image
+                                src={AboutImage}
+                                alt="about image"
+                                title="About"
+                                layout="responsive"
+                                width={200}
+                                height={130}
+                                className="h-100 w-100 object-cover"
+                            />
+                        </div>
+                        <div className="p-3 d-flex align-items-end align-items-xl-center flex-column w-100 w-md-50 justify-content-center">
+                            <div className="text-center text-md-start">
+                                <div className="row">
+                                    <div className="col-12 mb-3">
+                                        <h4 className="fs-2 fw-bold theme-text-secondary mb-0">
+                                            Time To Travel
+                                        </h4>
+                                    </div>
+                                </div>
+                                <p className="theme-text-accent-one p-0 font-normal text-base max-w-440 text-center text-md-start">
+                                    Reservationkart.com offers affordable airline tickets with exceptional customer service.
+                                    We ensure a seamless booking experience, prioritizing your travel needs and satisfaction every
+                                    step of the way. Book with us today!
+                                    <br></br>
+                                    <br></br>
+                                    We offer a complete traveler agency experience with services that include cab bookings and hotel
+                                    reservations. Plan your entire journey in one place, saving you time and money.
+                                </p>
+                            </div>
                         </div>
                     </div>
-                    <p className="theme-text-accent-one p-0 font-normal text-base max-w-440 text-center text-md-start">
-                        Reservationkart.com offers affordable airline tickets with exceptional customer service.
-                        We ensure a seamless booking experience, prioritizing your travel needs and satisfaction every
-                        step of the way. Book with us today!
-                        <br></br>
-                        <br></br>
-                        We offer a complete traveler agency experience with services that include cab bookings and hotel
-                        reservations. Plan your entire journey in one place, saving you time and money.
-                    </p>
                 </div>
-            </div>
-        </div>
-    </div>
-</section>
+            </section>
 
             { /* Benefit section */}
-            <section id="service" className="py-5">
-    <div className="container">
-        <div className="text-center mb-5">
-            <h4 className="fs-2 fw-bold theme-text-secondary">
-                Explore The World
-            </h4>
-            <h6>Your Journey to unforgettable Adventures.</h6>
-        </div>
-        <div className="row text-start mb-5">
-            <div className="col-lg-3 col-md-6 mb-4">
-                <div className="text-md-start text-center">
-                    <Image className="h-35 w-35 mb-3" src={FlightImg} alt="Flight Tickets" />
-                    <div className="body">
-                        <h5 className="title mt-1">Fast Booking</h5>
-                        <p className="theme-text-accent-one p-0 font-normal text-base max-w-440 text-md-start text-center">
-                            Quick and easy booking for your travel needs.
-                        </p>
+            <section id="service" className="py-4 my-5" style={{background:'#9f9f9f40'}}>
+                <div className="container">
+                    <div className="text-center mb-5">
+                        <h4 className="fs-2 fw-bold theme-text-secondary">
+                            Explore The World
+                        </h4>
+                        <h6>Your Journey to unforgettable Adventures.</h6>
+                    </div>
+                    <div className="row text-start mb-2">
+                        <div className="col-lg-3 col-md-6 mb-4">
+                            <div className="text-md-start text-center">
+                                <Image className="h-35 w-35 mb-3" src={FlightImg} alt="Flight Tickets" />
+                                <div className="body">
+                                    <h5 className="title mt-1">Fast Booking</h5>
+                                    <p className="theme-text-accent-one p-0 font-normal text-base max-w-440 text-md-start text-center">
+                                        Quick and easy booking for your travel needs.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-lg-3 col-md-6 mb-4">
+                            <div className="text-md-start text-center">
+                                <Image className="h-35 w-35 mb-3" src={HotelImg} alt="Hotel Reservation" />
+                                <div className="body">
+                                    <h5 className="title mt-1">Helpful Staff</h5>
+                                    <p className="theme-text-accent-one p-0 font-normal text-base max-w-440 text-md-start text-center">
+                                        Our friendly staff is always here to assist you.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-lg-3 col-md-6 mb-4">
+                            <div className="text-md-start text-center">
+                                <Image className="h-35 w-35 mb-3" src={TravelGuideImg} alt="Travel Guide" />
+                                <div className="body">
+                                    <h5 className="title mt-1">Expert Guide</h5>
+                                    <p className="theme-text-accent-one p-0 font-normal text-base max-w-440 text-md-start text-center">
+                                        Explore with our knowledgeable travel guides.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-lg-3 col-md-6 mb-4">
+                            <div className="text-md-start text-center">
+                                <Image className="h-35 w-35 mb-3" src={TripIMg} alt="Trip Activities" />
+                                <div className="body">
+                                    <h5 className="title mt-1">Amazing Offers</h5>
+                                    <p className="theme-text-accent-one p-0 font-normal text-base max-w-440 text-md-start text-center">
+                                        Take advantage of our unbeatable travel deals.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div className="col-lg-3 col-md-6 mb-4">
-                <div className="text-md-start text-center">
-                    <Image className="h-35 w-35 mb-3" src={HotelImg} alt="Hotel Reservation" />
-                    <div className="body">
-                        <h5 className="title mt-1">Helpful Staff</h5>
-                        <p className="theme-text-accent-one p-0 font-normal text-base max-w-440 text-md-start text-center">
-                            Our friendly staff is always here to assist you.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div className="col-lg-3 col-md-6 mb-4">
-                <div className="text-md-start text-center">
-                    <Image className="h-35 w-35 mb-3" src={TravelGuideImg} alt="Travel Guide" />
-                    <div className="body">
-                        <h5 className="title mt-1">Expert Guide</h5>
-                        <p className="theme-text-accent-one p-0 font-normal text-base max-w-440 text-md-start text-center">
-                            Explore with our knowledgeable travel guides.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div className="col-lg-3 col-md-6 mb-4">
-                <div className="text-md-start text-center">
-                    <Image className="h-35 w-35 mb-3" src={TripIMg} alt="Trip Activities" />
-                    <div className="body">
-                        <h5 className="title mt-1">Amazing Offers</h5>
-                        <p className="theme-text-accent-one p-0 font-normal text-base max-w-440 text-md-start text-center">
-                            Take advantage of our unbeatable travel deals.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+            </section>
 
 
 
 
             {/* contact us */}
-            <section className="contact-area" id="contact">
+            <section className="contact-area py-4" id="contact">
                 <div className="container">
                     <div className="row">
                         <div className="col-xl-7 col-lg-8">
-                            <div className="section-title mt-45">
+                            <div className="section-title mt-2">
                                 <h3 className="title">Ready For Unforgatable Travel. Remember Us!</h3>
                             </div>
 
@@ -279,7 +270,7 @@ const Offers = () => {
                             </form>
                         </div>
                         <div className="col-xl-4 col-lg-4 col-md-6 col-sm-8 offset-xl-1">
-                            <div className="section-title mt-5">
+                            <div className="section-title mt-sm-2">
                                 <h3 className="title">Contact Information</h3>
                             </div>
                             <div className="contact-info">
@@ -321,24 +312,20 @@ const Offers = () => {
                                 </ul>
                                 <ul className="social mt-5">
                                     <li>
-                                        <a href ="https://www.facebook.com/profile.php?id=61559553997456">
-                                        
-            
+                                        <a href="https://www.facebook.com/profile.php?id=61559553997456" target="_blank">
                                             <i className="bi bi-facebook"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="javascript:void(0)">
-                                            <i className="bi bi-twitter"></i>
-                                        </a>
+                                        <a href="javascript:void(0)" target="_blank"><i className="bi bi-twitter"></i></a>
                                     </li>
                                     <li>
-                                        <a href="https://www.instagram.com/reservationkart.com_/">
+                                        <a href="https://www.instagram.com/reservationkart.com_/" target="_blank">
                                             <i className="bi bi-instagram"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://www.linkedin.com/company/reservationkart-com/">
+                                        <a href="https://www.linkedin.com/company/reservationkart-com/" target="_blank">
                                             <i className="bi bi-linkedin"></i>
                                         </a>
                                     </li>
@@ -350,8 +337,8 @@ const Offers = () => {
             </section>
             {/* <!--====== CONTACT ONE PART ENDS ======--> */}
         </div>
-        
-        
+
+
     );
 };
 
