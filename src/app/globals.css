@@ -1223,9 +1223,23 @@ button.btn {
 .offers .section__container {
   max-width: 1200px;
   margin: auto;
-  padding: 5rem 1rem;
+  padding: 2rem 1rem;
+  overflow: hidden;
 }
 
+
+.offers-banner{
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh;
+  background-position: bottom;
+}
+
+.offers-banner h1{
+  font-size: 2.5rem;
+    font-weight: 800;
+    color: #0b97bf;
+}
 
 .offers .memories__header {
   display: flex;
@@ -1265,7 +1279,7 @@ button.btn {
 }
 
 .offers  h4{
-  margin-bottom: 1rem;
+  margin-bottom: 0.1rem !important;
   font-size: 1.2rem;
   font-weight: 600;
   color: #0f172a;
@@ -1274,13 +1288,13 @@ button.btn {
 
 .offers .number {
   display: inline-block;
-  font-size: 1.25em; /* Adjusted font size for responsiveness */
+  font-size: 1em;
   font-weight: bold;
   margin-right: 0.5em;
-  padding: 0.3em 0.7em;
-  border-radius: 50%;
+  padding: 0.1em 0.8em;
+  border-radius: 1.2rem;
   color: white;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.3em;
 }
 
 .offers .number-blue {
