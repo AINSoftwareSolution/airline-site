@@ -2,16 +2,20 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import { FooterLogo, Logo, PCCiIcon } from "../utils/images";
 
 const Header = () => {
   const [collapsed, setCollapsed] = useState(true);
+  const path = usePathname()
+
+
   const toggleNavbar = () => {
     setCollapsed(!collapsed);
   };
 
   return (
-    <header className="header theme-bg-white sticky-top">
+    <header className={`header theme-bg-white sticky-top ${path == '/offers' ? 'd-none': ''}`}>
       <div className="container">
         <nav className="navbar navbar-expand-lg py-3 py-lg-0 px-0">
           <Link href="/" className="navbar-brand py-3">

@@ -10,19 +10,14 @@ export async function GET(request:Request) {
         const authResponse = await oauthClient1.createToken(parseRedirect);
 
         // Set the OAuth client token for subsequent API calls
-        oauthClient1.token =authResponse.token;
+        oauthClient1.token = authResponse.token;
+        const realmId = authResponse.token.realmId;
 
-        // Make an API call to the QuickBooks API
-        const response = await oauthClient1.makeApiCall({
-            url: `https://sandbox-quickbooks.api.intuit.com/v4/company/9341452498340575/query?query=select * from Payment&minorversion=40`,
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${authResponse.token.access_token}`
-            }
-        });
+       const response=  NextResponse.json({data:authResponse}, { status: 200 });
+        response.cookies.set('qbToken', authResponse.token.access_token);
+        response.cookies.set('qbRealmId', realmId);
 
-        return NextResponse.json({res:response, data:authResponse.token.access_token}, { status: 200 });
+        return response
     } catch (e) {
         return NextResponse.json({ error: `Authentication failed: ${e}` }, { status: 500 });
     }

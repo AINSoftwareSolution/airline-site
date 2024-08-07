@@ -1,5 +1,4 @@
-import bannerImage from "./section/banner-image.png";
-import bannerImage1 from "./banner_image.jpg";
+import bannerImage from "./section/bg-pic.png";
 import Product01 from "./section/product-banner01.png";
 import Product02 from "./section/product-banner02.png";
 import PopupBg from './section/popup-bg.png'
@@ -50,19 +49,23 @@ import Gallery4 from "./gallery/gallery-4.jpg";
 import Gallery5 from "./gallery/gallery-5.jpg";
 
 import AboutusImg1 from "./about-us/about1.jpg";
-import AboutusImg2 from "./about-us/aboutImg2.jpg";
+import AboutusImg2 from "./about-us/about3.jpg";
 import Advantage1 from "./about-us/advantages1.jpg";
 import Advantage2 from "./about-us/advantages2.jpg";
 import Advantage3 from "./about-us/advantages3.jpg";
 import Advantage4 from "./about-us/advantages4.jpg";
 
-
-
+//Landing Page//
+import AboutImage from "./offers/landingPage-Img.webp";
+import FlightImg from "./offers/Image1.png"
+import HotelImg from "./offers/Image2.png";
+import TravelGuideImg from "./offers/Image3.png";
+import TripIMg from "./offers/Image4.png";
+import LandingImg from "./landing/Landing-Image.jpg"
 
 
 export {
   bannerImage,
-  bannerImage1,
   experienceBg,
   Product01,
   Product02,
@@ -110,4 +113,10 @@ export {
   LowestImg,
   ExcImg,
   Support,
+  AboutImage,
+  FlightImg,
+  HotelImg,
+  TravelGuideImg,
+  TripIMg,
+  LandingImg
 };
