@@ -45,7 +45,7 @@ const Offers = () => {
             <div className='offers-banner '
                 style={{ backgroundImage: `url(${LandingBg.src})` }}>
                 <div className="section__container">
-                    <div className="row d-flex align-items-center">
+                    <div className="row d-flex align-items-center py-4">
                         <div className="col-md-6 d-flex justify-content-center align-items-center">
                             <div className="bg-white border rounded shadow-sm overflow-hidden  p-4 p-xl-5">
                                 <h1>Travel Smart, Travel Far</h1>
