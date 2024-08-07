@@ -1,7 +1,7 @@
 import bannerImage from "./section/bg-pic.png";
 import Product01 from "./section/product-banner01.png";
 import Product02 from "./section/product-banner02.png";
-import PopupBg from './section/popup-bg.png'
+import PopupBg from "./section/popup-bg.png";
 
 import recommended1 from "./recommended/offers01.png";
 import recommended2 from "./recommended/offers02.png";
@@ -34,10 +34,10 @@ import AppleIcon from "./icons/play-icon.png";
 import paymentMethod from "./icons/payment-method.svg";
 import paymentMethod1 from "./icons/payment-method1.png";
 import PCCiIcon from "./icons/pci-dss-certified.png";
-import EasyImg from './icons/easy-booking.svg'
-import LowestImg from './icons/lowest-booking.svg'
-import ExcImg from './icons/exc-deal.svg'
-import Support from './icons/support.svg'
+import EasyImg from "./icons/easy-booking.svg";
+import LowestImg from "./icons/lowest-booking.svg";
+import ExcImg from "./icons/exc-deal.svg";
+import Support from "./icons/support.svg";
 
 import Logo from "./logo/logo.png";
 import FooterLogo from "./logo/NameKart - Logo.png";
@@ -57,12 +57,12 @@ import Advantage4 from "./about-us/advantages4.jpg";
 
 //Landing Page//
 import AboutImage from "./offers/landingPage-Img.webp";
-import FlightImg from "./offers/Image1.png"
+import FlightImg from "./offers/Image1.png";
 import HotelImg from "./offers/Image2.png";
 import TravelGuideImg from "./offers/Image3.png";
 import TripIMg from "./offers/Image4.png";
-import LandingImg from "./landing/Landing-Image.jpg"
-
+import LandingImg from "./landing/Landing-Image.jpg";
+import FAQImage from "./landing/faq-img-1.png";
 
 export {
   bannerImage,
@@ -118,5 +118,6 @@ export {
   HotelImg,
   TravelGuideImg,
   TripIMg,
-  LandingImg
+  LandingImg,
+  FAQImage,
 };
