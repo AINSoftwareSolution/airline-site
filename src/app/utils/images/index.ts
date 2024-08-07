@@ -61,7 +61,9 @@ import FlightImg from "./offers/Image1.png"
 import HotelImg from "./offers/Image2.png";
 import TravelGuideImg from "./offers/Image3.png";
 import TripIMg from "./offers/Image4.png";
+
 import LandingImg from "./landing/Landing-Image.jpg"
+import LandingBg from './landing/landing-bg.jpg'
 
 
 export {
@@ -118,5 +120,6 @@ export {
   HotelImg,
   TravelGuideImg,
   TripIMg,
-  LandingImg
+  LandingImg,
+  LandingBg
 };
