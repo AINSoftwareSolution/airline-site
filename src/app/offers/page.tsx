@@ -1,13 +1,18 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
-import { LandingBg, LandingImg, LandingServices } from "../utils/images";
+import { LandingBg, LandingImg, TestimonialImage1, TestimonialImage2, TestimonialImage3, LandingServices } from "../utils/images";
 import { useFormik } from "formik";
 import { useRouter } from "next/navigation";
-import { contactInitialValues } from "../utils/data";
+import { contactInitialValues, faqData } from "../utils/data";
 import { contactValidationSchema } from "../utils/schema";
 
 const Offers = () => {
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const handleToggle = (index: any) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
   const router = useRouter();
 
   const formik = useFormik({
@@ -203,8 +208,8 @@ const Offers = () => {
             </div>
             <div className="">
               <span className="number bg-success">04</span>
-              <h4>Group Booking</h4>
-              <p>Special rates and arrangements for group travel.</p>
+              <h4>Business Travel</h4>
+              <p>Tailored services for business travelers, ensuring a seamless and productive journey.</p>
             </div>
           </div>
           <div className="col-md-6">
@@ -232,37 +237,34 @@ const Offers = () => {
                   className="icon-circle"
                   style={{ backgroundColor: "#3d5cb8" }}
                 >
-                  <i className="bi bi-calendar2-check"></i>
+                  <i className="bi bi-telephone-inbound"></i>
                 </span>
-                <h4>Book & relax</h4>
+                <h4>Call Us</h4>
                 <p className="lh-base text-muted">
-                  With &quot;Book and Relax,&quot; you can sit back, unwind, and
-                  enjoy the journey while we take care of everything else.
+                  Dial our toll-free Number[18885087143].
                 </p>
               </div>
             </div>
             <div className="col-md-4">
               <div className="card-custom">
-                <span className="icon-circle bg-warning">
-                  <i className="bi bi-shield-check"></i>
+                <span className="icon-circle bg-primary">
+                  <i className="bi bi-headset"></i>
+
                 </span>
-                <h4>Smart Checklist</h4>
+                <h4>Speak With a Agent</h4>
                 <p className="lh-base text-muted">
-                  Introducing Smart Checklist with us, the innovative solution
-                  revolutionizing the way you travel with our airline.
+                  Our professional staff will help you find the best flights options.
                 </p>
               </div>
             </div>
             <div className="col-md-4">
               <div className="card-custom">
                 <span className="icon-circle bg-success">
-                  <i className="bi bi-tag"></i>
+                  <i className="bi bi-ticket-detailed"></i>
                 </span>
-                <h4>Save More</h4>
+                <h4>Book Your Ticket </h4>
                 <p className="lh-base text-muted">
-                  From discounted ticket prices to exclusive promotions and
-                  deals, we prioritize affordability without compromising on
-                  quality.
+                  Complete your booking over the phone and receive your confirmation.
                 </p>
               </div>
             </div>
@@ -301,121 +303,115 @@ const Offers = () => {
         </div>
       </section>
 
-      {/* CTA */}
-      {/* <section className="bsb-cta-2 py-5">
-        <div className="container">
-          <div className="card border-0 rounded-3 overflow-hidden text-center bsb-overlay"
-            style={{ backgroundColor: 'blue' }}>
-            <div className="card-body">
-              <div className="row align-items-center justify-content-center">
-                <div className="col-12 col-md-10 col-xl-8 col-xxl-7">
-                  <h2 className="h5 mb-4 text-white text-uppercase">Why Book Over the Phone?</h2>
-                  <p className="text-white">Booking over the phone with our call center ensures you receive personalized service
-                    and the best available rates.
-                    Our agents have access to exclusive deals and can offer expert advice on the best flights and itineraries for your needs.
-                  </p>
+
+      {/* ----------faq--------- */}
+      <section className="faq py-4">
+        <div className="container my-5">
+          <div className="row justify-content-center">
+            <div className="col-md-8">
+              <h2 className="text-center section__header">Frequently Asked Questions</h2>
+              <div className="accordion" id="faqAccordion">
+                {faqData.map((faq, index) => (
+                  <div className="accordion-item" key={index}>
+                    <h2 className="accordion-header" id={`heading${index}`}>
+                      <button
+                        className={`accordion-button ${activeIndex !== index ? 'collapsed' : ''}`}
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target={`#collapse${index}`}
+                        aria-expanded={activeIndex === index}
+                        aria-controls={`collapse${index}`}
+                        onClick={() => handleToggle(index)}
+                      >
+                        {faq.question}
+                      </button>
+                    </h2>
+                    <div
+                      id={`collapse${index}`}
+                      className={`accordion-collapse collapse ${activeIndex === index ? 'show' : ''}`}
+                      aria-labelledby={`heading${index}`}
+                      data-bs-parent="#faqAccordion"
+                    >
+                      <div className="accordion-body">
+                        {faq.answer}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      {/* Testimoial  */}
+      <section className="bg-light py-5 py-xl-8">
+        <div className="section__container">
+          <div className="row justify-content-md-center">
+            <div className="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
+              <h2 className=" section__header text-center">Testimonial</h2>
+              <p className=" mb-4 text-center">Effortless Booking, Unforgettable Journeys.</p>
+              <hr className="w-50 mx-auto mb-5 mb-xl-15 border-dark-subtle" />
+            </div>
+          </div>
+        </div>
+
+        <div className="container overflow-hidden">
+          <div className="row gy-4 gy-md-0 gx-xxl-5">
+            <div className="col-12 col-md-4">
+              <div className="card border-0 border-bottom border-primary shadow-sm">
+                <div className="card-body p-4 p-xxl-5">
+                  <figure>
+                    <Image src={TestimonialImage1} className="img-fluid rounded rounded-circle" alt="testimonial1" style={{ width: '100px', height: '100px', objectFit: 'cover' }} />
+                    <figcaption>
+                      <div className="bsb-ratings text-warning mb-3" data-bsb-star="5" data-bsb-star-off="0"></div>
+                      <blockquote className="bsb-blockquote-icon mb-4">Booking through ReservationKart.com was a breeze! The agents were so helpful and got me a great deal on my flight.</blockquote>
+                      <h4 className="mb-2">Sarah J</h4>
+                      <h5 className="fs-6 text-secondary mb-0">UX Designer</h5>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div>
+            <div className="col-12 col-md-4">
+              <div className="card border-0 border-bottom border-primary shadow-sm">
+                <div className="card-body p-4 p-xxl-5">
+                  <figure>
+                    <Image src={TestimonialImage2} className="img-fluid rounded rounded-circle" alt="testimonial1" style={{ width: '100px', height: '100px', objectFit: 'cover' }} />
+
+                    <figcaption>
+                      <div className="bsb-ratings text-warning mb-3" data-bsb-star="4" data-bsb-star-off="1"></div>
+                      <blockquote className="bsb-blockquote-icon mb-4">I missed my flight and was panicking. One call to their support line, and they had me rebooked in no time. Fantastic service!</blockquote>
+                      <h4 className="mb-2">Mike T</h4>
+                      <h5 className="fs-6 text-secondary mb-0">Marketing Specialist</h5>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div>
+            <div className="col-12 col-md-4">
+              <div className="card border-0 border-bottom border-primary shadow-sm">
+                <div className="card-body p-4 p-xxl-5">
+                  <figure>
+                    <Image src={TestimonialImage3} className="img-fluid rounded rounded-circle" alt="testimonial1" style={{ width: '100px', height: '100px', objectFit: 'cover' }} />
+
+                    <figcaption>
+                      <div className="bsb-ratings text-warning mb-3" data-bsb-star="5" data-bsb-star-off="0"></div>
+                      <blockquote className="bsb-blockquote-icon mb-4">Booking my flight was a breeze! The process was smooth and hassle-free, making my travel experience enjoyable from the start.</blockquote>
+                      <h4 className="mb-2">Luke Reeves</h4>
+                      <h5 className="fs-6 text-secondary mb-0">Sales Manager</h5>
+                    </figcaption>
+                  </figure>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section > */}
-
-      {/* ------- FAQ Section ---------*/}
-      < div className="container mt-5" >
-        <div className="text-center">
-          <div className="faq">
-            <h2 className="header">
-              <b>Frequently Asked Questions</b>
-            </h2>
-            <br></br>
-            {/* <!-- Accordion 1 --> */}
-            {/* <button className="accordion d-flex flex-row align-items-center"><img className="faq-icon" src="https://cdn.jsdelivr.net/gh/linuxguist/faqa@main/chevron-down.svg"> &nbsp; &nbsp; <b>What is an FAQ page?</b></button> */}
-            <div className="panel">
-              <div className="paragraphs" id="myDiv_id1"></div>
-              <p id="paragraph_id1" className="d-none">
-                Frequently Asked Questions (FAQ) pages contain a list of
-                commonly asked questions and answers on a website about topics
-                such as hours, shipping and handling, product information, and
-                return policies. Sure there are chatbots, support lines, and
-                customer reviews to help shoppers on their path to purchase, but
-                there’s one forgotten customer service tactic that is
-                cost-effective and streamlined. That tactic is an FAQ page.
-              </p>
-            </div>
-            {/* <!-- Accordion 2 --> */}
-            {/* <button className="accordion d-flex flex-row align-items-center"><img className="faq-icon" src="https://cdn.jsdelivr.net/gh/linuxguist/faqa@main/chevron-down.svg"> &nbsp; &nbsp; <b>Why you should make an FAQ page?</b></button> */}
-            <div className="panel">
-              <div className="paragraphs" id="myDiv_id2"></div>
-              <p id="paragraph_id2" className="d-none">
-                An FAQ page is a time-saving customer service tactic that
-                provides the most commonly asked questions and answers for
-                current or potential customers. Before diving into how to make
-                an FAQ page, you need to know why having one is so important.
-                There are so many reasons beyond improving the customer
-                experience for perfecting your FAQ page. Keep in mind the
-                importance of an FAQ page when developing your own e-commerce
-                website so you can make sure it increases sales and not the
-                other way around.
-              </p>
-            </div>
-            {/* <!-- Accordion 3 --> */}
-            {/* <button className="accordion d-flex flex-row align-items-center"><img className="faq-icon" src="https://cdn.jsdelivr.net/gh/linuxguist/faqa@main/chevron-down.svg"> &nbsp; &nbsp; <b>How to make an FAQ page?</b></button> */}
-            <div className="panel">
-              <div className="paragraphs" id="myDiv_id3"></div>
-              <p id="paragraph_id3" className="d-none">
-                There are seven simple steps to make the perfect FAQ page for
-                your business. The design of an FAQ page is crucial for an
-                easy-to-use customer experience. Follow these steps and your
-                customer success team will thank you. 1. Determine the questions
-                2. Categorize the questions 3. Highlight or link the most
-                popular questions 4. Include a search bar 5. Align with your
-                brand look and feel 6. Update regularly 7. Track and improve
-              </p>
-            </div>
-            {/* <!-- Accordion 4 --> */}
-            {/* <button className="accordion d-flex flex-row align-items-center"><img className="faq-icon" src="https://cdn.jsdelivr.net/gh/linuxguist/faqa@main/chevron-down.svg"> &nbsp; &nbsp; <b>What are the most frequently asked questions?</b></button> */}
-            <div className="panel">
-              <div className="paragraphs" id="myDiv_id4"></div>
-              <p id="paragraph_id4" className="d-none">
-                A good FAQ is general enough to address many issues. There are
-                questions that just about every company answers on their FAQ
-                page, so if you are struggling to get started use these as your
-                starting point. If they are relevant to your company, of course.
-                1. What is the return policy? 2. What are the shipping options?
-                3. What do I do if I never received my order? 4. When will I
-                receive my order? 5. How do I make sure I order the right size?
-                6. Where are you located? 7. Can I make changes to an order I
-                already placed? 8. How do I get a new password?
-              </p>
-            </div>
-            {/* <!-- Accordion 5 --> */}
-            {/* <button className="accordion d-flex flex-row align-items-center"><img className="faq-icon" src="https://cdn.jsdelivr.net/gh/linuxguist/faqa@main/chevron-down.svg"> &nbsp; &nbsp; <b>How to answer your FAQs?</b></button> */}
-            <div className="panel">
-              <div className="paragraphs" id="myDiv_id5"></div>
-              <p id="paragraph_id5" className="d-none">
-                When crafting the answers to your FAQs, involve someone from PR.
-                It’s unlikely you have an entire PR team on your staff, which is
-                OK, but there are plenty of freelance PR specialists who can
-                give input while writing these answers. It will highly benefit
-                you to consider hiring one for a week or two. Some of these
-                questions could cause you to expose shortcomings of your product
-                or service, so it is imperative that you position these answers
-                in a positive light while remaining truthful.
-              </p>
-            </div>
-          </div>
-          <h4 className="undertitle text-white">
-            Have some other questions?{" "}
-            <a href="https://example.com" target="_blank">
-              Visit our support page
-            </a>
-          </h4>
-          {/* <a class="spaces-button btn btn-success btn-round" href="https://example.com" style="padding:10px 80px; margin-top: 20px; margin-bottom: 20px;">Button For Further Action</a>
-    <h6 className="text-white"><a href="https://example.com" target="_blank">Terms and Conditions Link</a></h6><br> */}
-        </div>
-      </div >
-    </div >
+      </section>
+      {/* Testimonial end  */}
+    </div>
   );
 };
 
