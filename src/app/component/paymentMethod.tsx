@@ -102,7 +102,7 @@ const PaymentMethod = () => {
             <div className="modal-body text-center d-flex flex-column align-items-center py-4">
               <h3>Thank you for booking with us!</h3>
             </div>
-            
+
             <div className="card p-4">
               <div className="card-header text-center mb-4">
                 <div className="text-center">
@@ -146,7 +146,7 @@ const PaymentMethod = () => {
                   </div>
                 </div>
               </div>
-              
+
               <div className="card-body">
                 <form onSubmit={formik.handleSubmit}>
                   <div className="row">
@@ -333,7 +333,10 @@ const PaymentMethod = () => {
                       </div>
                     ) : null}
                   </div>
-                  <button type="submit" className="btn btn-success btn-lg w-100">
+                  <button
+                    type="submit"
+                    className="btn btn-success btn-lg w-100"
+                  >
                     Confirm Payment
                   </button>
                 </form>
