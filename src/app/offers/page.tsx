@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { LandingBg, LandingImg } from "../utils/images";
+import { LandingBg, LandingImg, LandingServices } from "../utils/images";
 import { useFormik } from "formik";
 import { useRouter } from "next/navigation";
 import { contactInitialValues } from "../utils/data";
@@ -48,7 +48,7 @@ const Offers = () => {
         <div className="section__container">
           <div className="row d-flex align-items-center py-4">
             <div className="col-md-6 d-flex justify-content-center align-items-center">
-              <div className="bg-white border rounded shadow-sm overflow-hidden  p-4 p-xl-5">
+              <div className="bg-white border rounded rounded-3 shadow-sm overflow-hidden  p-4 p-xl-5">
                 <h1>Travel Smart, Travel Far</h1>
                 <p>
                   {" "}
@@ -173,7 +173,7 @@ const Offers = () => {
       {/*----why chioose us ---------- */}
       <section className="section__container">
         <p className="h5 text-primary text-center fw-bold">Why Choose Us</p>
-        <h2 className="section__header">Plan your travel with confidence</h2>
+        <h2 className="section__header text-center">Plan your travel with confidence</h2>
         <p className="text-center lead mb-2">
           Find help with your bookings and travel plans, and see what to expect
           along your journey.
@@ -222,7 +222,7 @@ const Offers = () => {
       {/*-------- steps ------------  */}
       <section className="memories">
         <div className="section__container my-2">
-          <div className="memories__header">
+          <div className="section__header text-center">
             <h2>Travel to make memories all around the world</h2>
           </div>
           <div className="row g-5 mt-4">
@@ -270,9 +270,59 @@ const Offers = () => {
         </div>
       </section>
 
-      {/* ------- FAQ Section ---------*/}
+      {/* services */}
+      <section className="services">
+        <div className="section__container my-2">
+          <div className="row">
+            <div className="col-md-6">
+              <Image src={LandingServices} className="img-fluid" alt="reservationkart.com" />
+            </div>
+            <div className="col-md-6 d-flex align-items-center">
+              <div className="row">
+                <h2 className="section__header">Connecting You to the World</h2>
+                <p className="mb-4">Our extensive network and superior services connect you to destinations worldwide.
+                  Trust us to handle your booking with precision and care, so you can embark on your adventures with peace of mind.
+                </p>
+                <div className="col-md-6 mb-2">
+                  <h4>Domestic and International Flights</h4>
+                  <p>Whether you&apos;re traveling within the US or abroad, we have you covered.</p>
+                </div>
+                <div className="col-md-6 mb-2">
+                  <h4>Flight Changes and Cancellations</h4>
+                  <p>Need to change your plans? We offer flexible options.</p>
+                </div>
+                <div className="col-md-6 mb-2">
+                  <h4>Travel Insurance</h4>
+                  <p>Protect your trip with our comprehensive travel insurance plans.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <div className="container mt-5">
+      {/* CTA */}
+      {/* <section className="bsb-cta-2 py-5">
+        <div className="container">
+          <div className="card border-0 rounded-3 overflow-hidden text-center bsb-overlay"
+            style={{ backgroundColor: 'blue' }}>
+            <div className="card-body">
+              <div className="row align-items-center justify-content-center">
+                <div className="col-12 col-md-10 col-xl-8 col-xxl-7">
+                  <h2 className="h5 mb-4 text-white text-uppercase">Why Book Over the Phone?</h2>
+                  <p className="text-white">Booking over the phone with our call center ensures you receive personalized service
+                    and the best available rates.
+                    Our agents have access to exclusive deals and can offer expert advice on the best flights and itineraries for your needs.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section > */}
+
+      {/* ------- FAQ Section ---------*/}
+      < div className="container mt-5" >
         <div className="text-center">
           <div className="faq">
             <h2 className="header">
@@ -364,8 +414,8 @@ const Offers = () => {
           {/* <a class="spaces-button btn btn-success btn-round" href="https://example.com" style="padding:10px 80px; margin-top: 20px; margin-bottom: 20px;">Button For Further Action</a>
     <h6 className="text-white"><a href="https://example.com" target="_blank">Terms and Conditions Link</a></h6><br> */}
         </div>
-      </div>
-    </div>
+      </div >
+    </div >
   );
 };
 

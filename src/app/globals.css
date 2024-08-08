@@ -1213,7 +1213,6 @@ button.btn {
  
 /* offers */
 .offers .section__header {
-  text-align: center;
   font-size: 3rem;
   line-height: 4rem;
   font-weight: 600;
@@ -1240,13 +1239,6 @@ button.btn {
     color: #0b97bf;
 }
 
-.offers .memories__header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-}
-
 
 
 .offers .memories {
@@ -1270,9 +1262,9 @@ button.btn {
 
 .offers .card-custom  .icon-circle {
   display: inline-block;
-  padding: 20px 32px;
+  padding: 12px 20px;
   margin-bottom: 2rem;
-  font-size: 3rem;
+  font-size: 2rem;
   color: #fff;
   border-radius: 100%;
 }

@@ -64,6 +64,7 @@ import TripIMg from "./offers/Image4.png";
 
 import LandingImg from "./landing/Landing-Image.jpg";
 import LandingBg from "./landing/landing-bg.jpg";
+import LandingServices from './landing/lounge.png'
 
 export {
   bannerImage,
@@ -121,4 +122,5 @@ export {
   TripIMg,
   LandingImg,
   LandingBg,
+  LandingServices
 };
