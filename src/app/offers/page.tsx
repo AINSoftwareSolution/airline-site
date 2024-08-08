@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { LandingBg, LandingImg } from "../utils/images";
+import { LandingBg, LandingImg, TestimonialImage1, TestimonialImage2, TestimonialImage3 } from "../utils/images";
 import { useFormik } from "formik";
 import { useRouter } from "next/navigation";
 import { contactInitialValues } from "../utils/data";
@@ -321,8 +321,6 @@ const Offers = () => {
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
     {/* end faq  */}
 
     {/* Testimoial  */}
@@ -344,13 +342,7 @@ const Offers = () => {
         <div className="card border-0 border-bottom border-primary shadow-sm">
           <div className="card-body p-4 p-xxl-5">
             <figure>
-            <img
-  className="img-fluid rounded rounded-circle"
-  loading="lazy"
-  src="https://www.isse.tu-clausthal.de/fileadmin/_processed_/d/8/csm_dummy_male_0b1f65ee14.png"
-  alt="Luna John"
-  style={{ width: '100px', height: '100px', objectFit: 'cover' }}
-/>
+             <Image src={TestimonialImage1} className="img-fluid rounded rounded-circle" alt="testimonial1"style={{ width: '100px', height: '100px', objectFit: 'cover' }} />
               <figcaption>
                 <div className="bsb-ratings text-warning mb-3" data-bsb-star="5" data-bsb-star-off="0"></div>
                 <blockquote className="bsb-blockquote-icon mb-4">Booking through ReservationKart.com was a breeze! The agents were so helpful and got me a great deal on my flight.</blockquote>
@@ -365,13 +357,8 @@ const Offers = () => {
         <div className="card border-0 border-bottom border-primary shadow-sm">
           <div className="card-body p-4 p-xxl-5">
             <figure>
-            <img
-  className="img-fluid rounded rounded-circle"
-  loading="lazy"
-  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkA7r1pd3h80Lq9uOByb2ALq5FoOAe-Mq0j3_EZzmOo4tXO0CUkRHQrbXMruyClSGA87E&usqp=CAU"
-  alt="Luna John"
-  style={{ width: '100px', height: '100px', objectFit: 'cover' }}
-/>
+            <Image src={TestimonialImage2} className="img-fluid rounded rounded-circle" alt="testimonial1"style={{ width: '100px', height: '100px', objectFit: 'cover' }} />
+
               <figcaption>
                 <div className="bsb-ratings text-warning mb-3" data-bsb-star="4" data-bsb-star-off="1"></div>
                 <blockquote className="bsb-blockquote-icon mb-4">I missed my flight and was panicking. One call to their support line, and they had me rebooked in no time. Fantastic service!</blockquote>
@@ -386,16 +373,11 @@ const Offers = () => {
         <div className="card border-0 border-bottom border-primary shadow-sm">
           <div className="card-body p-4 p-xxl-5">
             <figure>
-            <img
-  className="img-fluid rounded rounded-circle"
-  loading="lazy"
-  src="https://www.els-institut.de/files/Bilder/Startseite/Team/dummy-mann.png"
-  alt="Luna John"
-  style={{ width: '100px', height: '100px', objectFit: 'cover' }}
-/>
+            <Image src={TestimonialImage3} className="img-fluid rounded rounded-circle" alt="testimonial1"style={{ width: '100px', height: '100px', objectFit: 'cover' }} />
+
               <figcaption>
                 <div className="bsb-ratings text-warning mb-3" data-bsb-star="5" data-bsb-star-off="0"></div>
-                <blockquote className="bsb-blockquote-icon mb-4">Booking my flight was a breeze! The process was smooth and hassle-free, making my travel experience enjoyable from the start."</blockquote>
+                <blockquote className="bsb-blockquote-icon mb-4">Booking my flight was a breeze! The process was smooth and hassle-free, making my travel experience enjoyable from the start.</blockquote>
                 <h4 className="mb-2">Luke Reeves</h4>
                 <h5 className="fs-6 text-secondary mb-0">Sales Manager</h5>
               </figcaption>
