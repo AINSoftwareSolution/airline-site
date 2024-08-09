@@ -43,3 +43,9 @@ export const contactValidationSchema = object({
   phone: string().required('Phone Number is required'),
   message: string().required('Message is required'),
 })
+
+export const LandingcontactValidationSchema = object({
+  name: string().required('Full Name is required'),
+  email: string().email('Invalid email format').required('Email is required'),
+  phone: string().required('Phone Number is required'),
+})

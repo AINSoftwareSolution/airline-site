@@ -68,6 +68,7 @@ import LandingServices from './landing/lounge.png'
 import TestimonialImage1 from "./landing/testimonial1.png";
 import TestimonialImage2 from "./landing/testimonial2.png";
 import TestimonialImage3 from "./landing/testimonial3.png";
+import OffersBg from './landing/offer-bg.jpg'
 
 export {
   bannerImage,
@@ -128,5 +129,6 @@ export {
   LandingServices,
   TestimonialImage1,
   TestimonialImage2,
-  TestimonialImage3
+  TestimonialImage3,
+  OffersBg
 };
