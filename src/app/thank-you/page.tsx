@@ -41,7 +41,7 @@ const ThankYou = () => {
         </div>
       </div>
 
-      <CallModal show={show} handleClose={handleToggle} setShow={setShow} />
+      <CallModal show={show} handleClose={handleToggle} setShow={setShow}  ispath={false}/>
     </>
   );
 };

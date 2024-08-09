@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import { PopupBg } from '../utils/images';
 import { Modalprops } from '../utils/types';
 
-const CallModal: React.FC<Modalprops> = ({ show, handleClose, setShow , ispath = false }) => {
+const CallModal: React.FC<Modalprops> = ({ show, handleClose, setShow , ispath = true }) => {
 
 
   useEffect(() => {
