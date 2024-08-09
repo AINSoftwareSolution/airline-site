@@ -1,14 +1,16 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import { LandingBg, LandingImg, TestimonialImage1, TestimonialImage2, TestimonialImage3, LandingServices } from "../utils/images";
+import { LandingBg, LandingImg, TestimonialImage1, TestimonialImage2, TestimonialImage3, LandingServices, experienceBg, OffersBg } from "../utils/images";
 import { useFormik } from "formik";
 import { useRouter } from "next/navigation";
-import { contactInitialValues, faqData } from "../utils/data";
-import { contactValidationSchema } from "../utils/schema";
+import { faqData, landingcontactInitialValues } from "../utils/data";
+import { LandingcontactValidationSchema } from "../utils/schema";
+import { CallModal, Counter } from "../component";
 
 const Offers = () => {
   const [activeIndex, setActiveIndex] = useState(null);
+  const [show, setShow] = useState(false)
 
   const handleToggle = (index: any) => {
     setActiveIndex(activeIndex === index ? null : index);
@@ -16,8 +18,8 @@ const Offers = () => {
   const router = useRouter();
 
   const formik = useFormik({
-    initialValues: contactInitialValues,
-    validationSchema: contactValidationSchema,
+    initialValues: landingcontactInitialValues,
+    validationSchema: LandingcontactValidationSchema,
     onSubmit: async (values, { setSubmitting }) => {
       try {
         setSubmitting(true);
@@ -136,22 +138,6 @@ const Offers = () => {
                       {errors.phone && (
                         <span className="text-danger error">
                           {errors.phone}
-                        </span>
-                      )}
-                    </div>
-                    <div className="col-12 mt-2">
-                      <label htmlFor="message" className="form-label">
-                        Message <span className="text-danger">*</span>
-                      </label>
-                      <textarea
-                        className="form-control"
-                        id="message"
-                        name="message"
-                        onChange={handleChange}
-                      ></textarea>
-                      {errors.message && (
-                        <span className="text-danger error">
-                          {errors.message}
                         </span>
                       )}
                     </div>
@@ -303,7 +289,6 @@ const Offers = () => {
         </div>
       </section>
 
-
       {/* ----------faq--------- */}
       <section className="faq py-4">
         <div className="container my-5">
@@ -344,16 +329,49 @@ const Offers = () => {
         </div>
       </section>
 
-
+      {/* <!-- wonderful experience --> */}
+      <section className="experience">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <div
+                className="wrap"
+                style={{ backgroundImage: `url(${OffersBg.src})` }}
+              >
+                <div className="row">
+                  <div className="col-12 position-relative align-self-center">
+                    <h4 className="text-white mb-0 fw-bold text-center">Don&apos;t Wait, Time Is Running Out!</h4>
+                    <h5 className="display-4 theme-text-white mb-0 fw-bold text-center">
+                      Grab this limited-time offer before it disappears!
+                    </h5>
+                    <div className="group custom-button">
+                      <div className="d-flex align-items-center">
+                        <button
+                          type="submit"
+                          className="btn btn-search mt-4 mb-6 me-2 px-4"
+                          onClick={()=> setShow(true)}
+                        >
+                          <span className="fw-bold">  &nbsp; &nbsp; Grab Now &nbsp; &nbsp;</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <Counter />
+        </div>
+      </section>
 
       {/* Testimoial  */}
       <section className="bg-light py-5 py-xl-8">
         <div className="section__container">
           <div className="row justify-content-md-center">
             <div className="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
-              <h2 className=" section__header text-center">Testimonial</h2>
-              <p className=" mb-4 text-center">Effortless Booking, Unforgettable Journeys.</p>
-              <hr className="w-50 mx-auto mb-5 mb-xl-15 border-dark-subtle" />
+              <h2 className="section__header text-center">Testimonial</h2>
+              <p className="mb-4 text-center">Effortless Booking, Unforgettable Journeys.</p>
+              <hr className="w-50 mx-auto mb-2 mb-xl-15 border-dark-subtle" />
             </div>
           </div>
         </div>
@@ -379,11 +397,12 @@ const Offers = () => {
               <div className="card border-0 border-bottom border-primary shadow-sm">
                 <div className="card-body p-4 p-xxl-5">
                   <figure>
-                    <Image src={TestimonialImage2} className="img-fluid rounded rounded-circle" alt="testimonial1" style={{ width: '100px', height: '100px', objectFit: 'cover' }} />
-
+                    <Image src={TestimonialImage2} className="img-fluid rounded rounded-circle" alt="testimonial1"
+                      style={{ width: '100px', height: '100px', objectFit: 'cover' }} />
                     <figcaption>
                       <div className="bsb-ratings text-warning mb-3" data-bsb-star="4" data-bsb-star-off="1"></div>
-                      <blockquote className="bsb-blockquote-icon mb-4">I missed my flight and was panicking. One call to their support line, and they had me rebooked in no time. Fantastic service!</blockquote>
+                      <blockquote className="bsb-blockquote-icon mb-4">I missed my flight and was panicking. One call to their support line,
+                        and they had me rebooked in no time. Fantastic service!</blockquote>
                       <h4 className="mb-2">Mike T</h4>
                       <h5 className="fs-6 text-secondary mb-0">Marketing Specialist</h5>
                     </figcaption>
@@ -396,7 +415,6 @@ const Offers = () => {
                 <div className="card-body p-4 p-xxl-5">
                   <figure>
                     <Image src={TestimonialImage3} className="img-fluid rounded rounded-circle" alt="testimonial1" style={{ width: '100px', height: '100px', objectFit: 'cover' }} />
-
                     <figcaption>
                       <div className="bsb-ratings text-warning mb-3" data-bsb-star="5" data-bsb-star-off="0"></div>
                       <blockquote className="bsb-blockquote-icon mb-4">Booking my flight was a breeze! The process was smooth and hassle-free, making my travel experience enjoyable from the start.</blockquote>
@@ -411,6 +429,9 @@ const Offers = () => {
         </div>
       </section>
       {/* Testimonial end  */}
+
+      <CallModal show={show} handleClose={() => setShow(!show)} setShow={setShow} ispath={false} />
+
     </div>
   );
 };

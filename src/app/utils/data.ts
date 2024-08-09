@@ -168,6 +168,12 @@ export const contactInitialValues ={
  message:''
 }
 
+export const landingcontactInitialValues ={
+  name:'',
+  email:'',
+  phone:'',
+ }
+
 
 export const reviewsData = [
   {
