@@ -14,7 +14,7 @@ const Counter: React.FC = () => {
       targetValue: number, 
       duration: number
     ) => {
-      let startValue = targetValue == 4.5 ? 0 : 800;
+      let startValue = targetValue == 4.5 ? 0 : 1400;
       const incrementTime = Math.abs(Math.floor(duration / targetValue));
 
       const timer = setInterval(() => {
@@ -32,8 +32,8 @@ const Counter: React.FC = () => {
       (entries) => {
         const entry = entries[0];
         if (entry.isIntersecting && !hasAnimated) {
-          incrementCounter(setTickets, 1245, 2000);
-          incrementCounter(setCustomers, 1367, 2000);
+          incrementCounter(setTickets, 2300, 2000);
+          incrementCounter(setCustomers, 3000, 2000);
           incrementCounter(setRatings, 4.5, 2000);
           setHasAnimated(true);
           observer.disconnect();
