@@ -59,7 +59,7 @@ const Offers = () => {
                 <h1>Travel Smart, Travel Far</h1>
                 <p>
                   {" "}
-                  From booking to boarding, Reservationkart.com here to make
+                  From booking to boarding, Reservationkart.com is here to make
                   your journey effortless.
                 </p>
                 <form onSubmit={handleSubmit}>
