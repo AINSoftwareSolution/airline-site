@@ -27,8 +27,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <head>
-        <GoogleTagManager gtmId='GTM-TLKWGHTB' />
-        <Script async src="https://www.googletagmanager.com/gtag/js?id=AW-16624061918"></Script>
+        <GoogleTagManager gtmId='AW-16615907817' />
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=AW-16615907817 "></Script>
         <Script
           id="gtag-init"
           strategy="afterInteractive"
@@ -37,7 +37,7 @@ export default function RootLayout({
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'AW-16624061918');
+              gtag('config', 'AW-16615907817');
             `,
           }}
         />
@@ -48,7 +48,7 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <noscript>
-          <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TLKWGHTB"
+          <iframe src="https://www.googletagmanager.com/ns.html?id=AW-16615907817"
             height="0" width="0" style={{ display: 'none', visibility: 'hidden' }}>
           </iframe>
         </noscript>
