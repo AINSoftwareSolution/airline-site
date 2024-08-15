@@ -6,9 +6,9 @@ import RecommendedCard from "./recommendedCard";
 import RouteCard from "./routeCard";
 import NewsLetter from "./newsLetter";
 import PaymentMethod from "./paymentMethod";
+import Counter from "./counter";
 
 
 
 
-
-export { AutoSearch , CallModal ,DestinationCard, Dropdown, RecommendedCard, RouteCard, NewsLetter, PaymentMethod,}
+export { AutoSearch , CallModal, Counter ,DestinationCard, Dropdown, RecommendedCard, RouteCard, NewsLetter, PaymentMethod,}

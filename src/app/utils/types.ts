@@ -47,6 +47,7 @@ export interface Modalprops {
   show: boolean;
   handleClose: () => void;
   setShow: any;
+  ispath?: boolean
 }
 
 export interface AutoSearchProps {

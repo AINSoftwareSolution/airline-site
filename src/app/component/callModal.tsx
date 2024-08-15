@@ -1,16 +1,14 @@
 import Link from 'next/link';
 import { useEffect } from 'react';
-import { usePathname } from 'next/navigation';
 
 import { PopupBg } from '../utils/images';
 import { Modalprops } from '../utils/types';
 
-const CallModal: React.FC<Modalprops> = ({ show, handleClose, setShow }) => {
+const CallModal: React.FC<Modalprops> = ({ show, handleClose, setShow , ispath = true }) => {
 
-  const path = usePathname()
 
   useEffect(() => {
-    if(path != '/thank-you'){
+    if(ispath){
       const timer = setTimeout(() => {
         setShow(true);
       }, 5000);

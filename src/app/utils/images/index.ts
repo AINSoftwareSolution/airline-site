@@ -64,9 +64,11 @@ import TripIMg from "./offers/Image4.png";
 
 import LandingImg from "./landing/Landing-Image.jpg";
 import LandingBg from "./landing/landing-bg.jpg";
+import LandingServices from './landing/lounge.png'
 import TestimonialImage1 from "./landing/testimonial1.png";
 import TestimonialImage2 from "./landing/testimonial2.png";
 import TestimonialImage3 from "./landing/testimonial3.png";
+import OffersBg from './landing/offer-bg.jpg'
 
 // features//
 import AbuDhaabiImg from "./Features/abu-dhabi-img.jpg"
@@ -145,6 +147,7 @@ export {
   TripIMg,
   LandingImg,
   LandingBg,
+  LandingServices,
   TestimonialImage1,
   TestimonialImage2,
   TestimonialImage3,
@@ -163,6 +166,6 @@ export {
   WashingtonDCImage,
   HowItWorkImg1,
   HowItWorkImg2,
-  HowItWorkImg3
-
+  HowItWorkImg3,
+  OffersBg
 };
