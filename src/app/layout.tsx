@@ -9,6 +9,7 @@ import Header from "./layout/header";
 
 import "./globals.css";
 import Script from "next/script";
+import FooterCall from "./component/footerCall";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -55,6 +56,7 @@ export default function RootLayout({
         <Header />
         {children}
         <CookieCard />
+        <FooterCall />
         <Footer />
         <Script async src="https://api.cronbot.ai/v1/widgets/app/app_tilrrkroyu43"></Script>
       </body>

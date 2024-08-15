@@ -38,6 +38,7 @@ import EasyImg from "./icons/easy-booking.svg";
 import LowestImg from "./icons/lowest-booking.svg";
 import ExcImg from "./icons/exc-deal.svg";
 import Support from "./icons/support.svg";
+import Caller from './icons/support-call.webp'
 
 import Logo from "./logo/logo.png";
 import FooterLogo from "./logo/NameKart - Logo.png";
@@ -69,6 +70,7 @@ import TestimonialImage1 from "./landing/testimonial1.png";
 import TestimonialImage2 from "./landing/testimonial2.png";
 import TestimonialImage3 from "./landing/testimonial3.png";
 import OffersBg from './landing/offer-bg.jpg'
+
 
 // features//
 import AbuDhaabiImg from "./Features/abu-dhabi-img.jpg"
@@ -167,5 +169,6 @@ export {
   HowItWorkImg1,
   HowItWorkImg2,
   HowItWorkImg3,
-  OffersBg
+  OffersBg,
+  Caller
 };
