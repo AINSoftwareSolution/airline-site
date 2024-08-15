@@ -89,6 +89,9 @@ export interface FormValues {
   stop_mode: boolean;
   class_mode: boolean;
   sectors: Sector[];
+  name:string;
+  email:string;
+  phone:string
 }
 
 export interface SearchEngineProps {
