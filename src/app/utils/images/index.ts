@@ -89,6 +89,14 @@ import HowItWorkImg1 from "./how-it-work/img1.jpg"
 import HowItWorkImg2 from "./how-it-work/img2.avif"
 import HowItWorkImg3 from "./how-it-work/passport.png"
 
+// Recomendation //
+import RecomandationImage1 from "./recommended/Rec-img1.jpg"
+import RecomandationImage2 from "./recommended/rec-img2.jpeg"
+import  RecomandationImage3 from "./recommended/rec-img3.jpeg"
+import  RecomandationImage4 from "./recommended/rec-img4.jpeg"
+import  RecomandationImage5 from "./recommended/rec-img5.jpg"
+import  RecomandationImage6 from "./recommended/rec-img6.jpeg"
+
 
 export {
  
@@ -167,5 +175,11 @@ export {
   HowItWorkImg1,
   HowItWorkImg2,
   HowItWorkImg3,
-  OffersBg
+  OffersBg,
+  RecomandationImage1,
+  RecomandationImage2,
+  RecomandationImage3,
+  RecomandationImage4,
+  RecomandationImage5,
+  RecomandationImage6
 };

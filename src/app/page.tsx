@@ -46,7 +46,13 @@ import {
   WashingtonDCImage,
   HowItWorkImg1,
   HowItWorkImg2,
-  HowItWorkImg3
+  HowItWorkImg3,
+  RecomandationImage1,
+  RecomandationImage2,
+  RecomandationImage3,
+  RecomandationImage4,
+  RecomandationImage5,
+  RecomandationImage6
 } from "./utils/images";
 
 const Home = () => {
@@ -809,7 +815,7 @@ const Home = () => {
       </section>   
             */}
       {/* <!-- wonderful experience --> */}
-      <section className="experience">
+     {/* <section className="experience">
         <div className="container">
           <div className="row">
             <div className="col-12">
@@ -838,7 +844,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> 
           {/* <div className="row mt-5">
             <div className="col-12 col-sm-6 col-lg-4 mb-3 mb-lg-0">
               <div className="d-flex align-items-center p-4 p-md-0">
@@ -862,10 +868,9 @@ const Home = () => {
                 <p className="fs-4 mb-0 theme-text-accent-one">Ratings</p>
               </div>
             </div>
-          </div>  */}
-        </div>
-      </section>
-
+          </div>  
+         </div>
+      </section> */}
       {/* <!-- popular routes section --> */}
       {/*  <section className="popular-routes">
         <div className="container">
@@ -897,7 +902,7 @@ const Home = () => {
       </section>  ~ */}
 
       {/* Gallery */}
-      <section id="gallery">
+      {/* <section id="gallery">
         <div className="container">
           <div className="row">
             <div className="col-12 text-center mb-5">
@@ -949,7 +954,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      {/* review */}
+      {/* review 
       <section className="my-4" id="reviews">
         <div className='container'>
           <div className="row">
@@ -977,7 +982,14 @@ const Home = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
+
+      {/* Recommandation section Start */}
+       
+  
+        
+
+     
       { /* call us modal */}
       <CallModal show={show} handleClose={handleToggle} setShow={setShow} />
     </main>
