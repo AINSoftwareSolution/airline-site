@@ -10,10 +10,10 @@ const DestinationCard: React.FC<DestinationCardProps> = ({ destination, handle }
     <div className="col-12 col-lg-3">
       <div className="theme-bg-white mb-5">
         <div className="row g-0 align-items-center">
-          <div className="col-4 col-xxl-2 overflow-hidden rounded-circle">
+          <div className="col-4 col-xxl-2 overflow-hidden ">
             <div className="overflow-hidden">
               <figure className="mb-0 img-effect">
-                <Image src={imgSrc} alt={destinationName} className="img-fluid" width={150} height={150} />
+                <Image src={imgSrc} alt={destinationName} className="img-fluid" width={250} height={250} />
               </figure>
             </div>
           </div>

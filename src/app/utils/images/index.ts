@@ -70,7 +70,28 @@ import TestimonialImage2 from "./landing/testimonial2.png";
 import TestimonialImage3 from "./landing/testimonial3.png";
 import OffersBg from './landing/offer-bg.jpg'
 
+// features//
+import AbuDhaabiImg from "./Features/abu-dhabi-img.jpg"
+import LondonImg from "./Features/Lomdon-img.jpg"
+import NewYorkImg from "./Features/new-york-img.webp"
+import SydneyImg from "./Features/sy.jpg"
+// Destination //
+import GreenLAndImage from "./destination2/greenland-image.webp"
+import ItalyImage from "./destination2/italy.webp"
+import DubaiDestinationImage from "./destination2/dubai-destination.avif"
+import GreeceImage from "./destination2/greece.avif"
+import AustraliyaImage from "./destination2/aus.avif"
+import LasVegasImage from "./destination2/las-vegas.webp"
+import ThailandImage from "./destination2/thailand-img.avif"
+import TokyoImage from "./destination2/photo-tokyo.avif"
+import WashingtonDCImage from "./destination2/washington-d-.jpg"
+import HowItWorkImg1 from "./how-it-work/img1.jpg"
+import HowItWorkImg2 from "./how-it-work/img2.avif"
+import HowItWorkImg3 from "./how-it-work/passport.png"
+
+
 export {
+ 
   bannerImage,
   experienceBg,
   Product01,
@@ -130,5 +151,21 @@ export {
   TestimonialImage1,
   TestimonialImage2,
   TestimonialImage3,
+  AbuDhaabiImg,
+  LondonImg,
+  NewYorkImg,
+  SydneyImg,
+  GreenLAndImage,
+  GreeceImage,
+  DubaiDestinationImage,
+  AustraliyaImage,
+  ItalyImage,
+  LasVegasImage,
+  ThailandImage,
+  TokyoImage,
+  WashingtonDCImage,
+  HowItWorkImg1,
+  HowItWorkImg2,
+  HowItWorkImg3,
   OffersBg
 };
