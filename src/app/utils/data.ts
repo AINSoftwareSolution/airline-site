@@ -150,7 +150,10 @@ export const initialValues = (isSearch: boolean): FormValues => ({
   },
   stop_mode: false,
   class_mode: false,
-  sectors: [{ id: 1, departFrom: '', arrivalTo: '', departureDate: '' }]
+  sectors: [{ id: 1, departFrom: '', arrivalTo: '', departureDate: '' }],
+  name:'',
+  email:'',
+  phone:''
 });
 
 export const searchOption = [

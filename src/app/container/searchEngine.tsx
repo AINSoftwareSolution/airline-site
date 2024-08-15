@@ -30,8 +30,8 @@ const SearchEngine: React.FC<SearchEngineProps> = ({ handleToggle }) => {
         initialValues: initialValues(isSearch),
         validationSchema,
         onSubmit: async (values, { setSubmitting }) => {
-            handleToggle && handleToggle()
-            // console.log(values);
+            handleToggle && handleToggle();
+            console.log(values);
             // router.push('/search');
         },
     });
@@ -133,7 +133,7 @@ const SearchEngine: React.FC<SearchEngineProps> = ({ handleToggle }) => {
                                                     </div>
                                                 </li>
                                                 <li >
-                                                    <div className="d-flex small">Childrens</div>
+                                                    <div className="d-flex small">Children</div>
                                                     <div className="ms-auto input-group plus-minus-input">
                                                         <div className="input-group-button">
                                                             <button type="button" className="circle"
@@ -190,6 +190,56 @@ const SearchEngine: React.FC<SearchEngineProps> = ({ handleToggle }) => {
                                 </div>
                             </div>
                         </div>
+
+                        <div className="row mt-4">
+                            <div className="col-12 col-lg-6">
+                                <div className="search-pan row mx-0 theme-border-radius border">
+                                    <div className="col-12 col-lg-4 col-xl-4 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-2">
+                                        <div className="form-group">
+                                            <label className="form-label">Name</label>
+                                            <input
+                                                placeholder="Name"
+                                                type="text"
+                                                name="name"
+                                                className="form-control"
+                                                value={values?.name}
+                                                onChange={handleChange}
+                                            />
+                                            {errors.name && touched.name && <div className="text-danger">{errors.name}</div>}
+                                        </div>
+                                    </div>
+                                    <div className="col-12 col-lg-4 col-xl-4 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-2">
+                                        <div className="form-group">
+                                            <label className="form-label">Email</label>
+                                            <input
+                                                type="email"
+                                                name="email"
+                                                placeholder="Email address"
+                                                className="form-control"
+                                                value={values?.email}
+                                                onChange={handleChange}
+                                            />
+                                            {errors.email && touched.email && <div className="text-danger">{errors.email}</div>}
+                                        </div>
+                                    </div>
+                                    <div className="col-12 col-lg-4 col-xl-4 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-2 border-0">
+                                        <div className="form-group">
+                                            <label className="form-label">Phone</label>
+                                            <input
+                                                type="tel"
+                                                name="phone"
+                                                placeholder="Phone Number"
+                                                className="form-control"
+                                                value={values?.phone}
+                                                onChange={handleChange}
+                                            />
+                                            {errors.phone && touched.phone && <div className="text-danger">{errors.phone}</div>}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         {values.selectedTab == 'Multi City' &&
                             sectors.map((sector, index) => (
                                 <div className="row mt-4" key={sector.id}>
@@ -234,6 +284,8 @@ const SearchEngine: React.FC<SearchEngineProps> = ({ handleToggle }) => {
                         }
                     </div>
                 </div>
+
+
                 <div className={`row ${isSearch ? 'd-none' : ''}`}>
                     <div className="col-12 mt-4">
                         <div className="d-flex flex-sm-row flex-column">

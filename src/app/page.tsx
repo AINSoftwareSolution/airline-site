@@ -1,28 +1,9 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import {
-  AboutusImg1,
-  AboutusImg2,
-  Advantage1,
-  Advantage2,
-  Advantage3,
-  Advantage4,
-  EasyImg,
-  ExcImg,
-  LowestImg,
-  Support,
-  
-} from "./utils/images";
 import { useState } from "react";
-import { destinationData, recommendedCardData, reviewsData, routesData } from "./utils/data";
-import {
-  DestinationCard,
-  CallModal,
-  RouteCard,
-  RecommendedCard,
-  PaymentMethod,
-} from "./component";
+import {  reviewsData} from "./utils/data";
+import { CallModal,} from "./component";
 import {
   Product01,
   Product02,
@@ -46,8 +27,13 @@ import {
   WashingtonDCImage,
   HowItWorkImg1,
   HowItWorkImg2,
-  HowItWorkImg3
+  HowItWorkImg3,
+  EasyImg,
+  ExcImg,
+  LowestImg,
+  Support,
 } from "./utils/images";
+import SearchEngine from "./container/searchEngine";
 
 const Home = () => {
   const [show, setShow] = useState<boolean>(false);
@@ -82,17 +68,17 @@ const Home = () => {
                     you have been seeking.
                   </p>
 
-                  <button
+                  {/* <button
                     type="submit"
                     className="btn btn-search mt-4 mb-6 me-2"
                     onClick={handleToggle}
                   >
                     <span className="fw-bold"> Call Now</span>
-                  </button>
+                  </button> */}
                   {/* <PaymentMethod /> */}
                 </div>
               </div>
-              {/* <SearchEngine handleToggle={handleToggle} /> */}
+              <SearchEngine handleToggle={handleToggle} />
             </div>
           </div>
         </div>
