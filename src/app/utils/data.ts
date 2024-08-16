@@ -11,6 +11,12 @@ import {
   LasVegasImage,
   LondonImg,
   NewYorkImg,
+  RecomandationImage1,
+  RecomandationImage2,
+  RecomandationImage3,
+  RecomandationImage4,
+  RecomandationImage5,
+  RecomandationImage6,
   SydneyImg,
   ThailandImage,
   TokyoImage,
@@ -295,5 +301,45 @@ export const steps = [
     imageAlt: "Customize & book",
     stepTitle: "Customize & book",
     stepDescription: "a perfect travel experience",
+  },
+];
+
+
+export const recommendations = [
+  {
+    image: RecomandationImage1,
+    title: "New York, United States",
+    alt: "Unique Experience One",
+    link: "#",
+  },
+  {
+    image: RecomandationImage2,
+    title: "Cusco, Peru",
+    alt: "Unique Experience Two",
+    link: "#",
+  },
+  {
+    image: RecomandationImage3,
+    title: "Kyoto, Japan",
+    alt: "Unique Experience Three",
+    link: "#",
+  },
+  {
+    image: RecomandationImage4,
+    title: "Paris, France",
+    alt: "Unique Experience Four",
+    link: "#",
+  },
+  {
+    image: RecomandationImage5,
+    title: "Sydney, Australia",
+    alt: "Unique Experience Five",
+    link: "#",
+  },
+  {
+    image: RecomandationImage6,
+    title: "Cape Town, South Africa",
+    alt: "Unique Experience Six",
+    link: "#",
   },
 ];

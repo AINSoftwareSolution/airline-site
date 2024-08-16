@@ -68,15 +68,16 @@ const Header = () => {
                 </Link>
               </li>
               <li className="nav-item">
+                <Link className={`${scrollPosition > 0 ? 'text-dark' : 'text-white'} nav-link pe-4`} href="/#">
+                  Flights
+                </Link>
+              </li>
+              <li className="nav-item">
                 <Link className={`${scrollPosition > 0 ? 'text-dark' : 'text-white'} nav-link pe-4`} href="/about-us">
                   About
                 </Link>
               </li>
-              <li className="nav-item">
-                <Link className={`${scrollPosition > 0 ? 'text-dark' : 'text-white'} nav-link pe-4`} href="/#gallery">
-                  Gallery
-                </Link>
-              </li>
+              
               <li className="nav-item">
                 <Link className={` ${scrollPosition > 0 ? 'text-dark' : 'text-white' } nav-link pe-4`} href="/contact">
                   Contact
