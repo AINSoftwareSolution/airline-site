@@ -3,13 +3,13 @@ import { Inter } from "next/font/google";
 import { GoogleTagManager } from '@next/third-parties/google'
 
 
+import { FooterCall } from "./component";
 import CookieCard from "./layout/cookieCard";
 import Footer from "./layout/footer";
 import Header from "./layout/header";
 
 import "./globals.css";
 import Script from "next/script";
-import FooterCall from "./component/footerCall";
 
 const inter = Inter({ subsets: ["latin"] });
 
