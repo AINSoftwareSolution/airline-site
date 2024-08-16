@@ -1,3 +1,5 @@
+'use client'
+
 import React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
@@ -107,7 +109,7 @@ const PaymentMethod = () => {
               <div className="card-header text-center mb-4">
                 <div className="text-center">
                   <span>Secured Payment with the following methods:</span>
-                  <div className="d-flex justify-content-center mt-2">
+                  {/* <div className="d-flex justify-content-center mt-2">
                     <img
                       className="img-fluid mx-2"
                       src="https://cdn0.iconfinder.com/data/icons/credit-card-debit-card-payment-PNG/128/Mastercard-Curved.png"
@@ -143,7 +145,7 @@ const PaymentMethod = () => {
                       width={40}
                       height={25}
                     />
-                  </div>
+                  </div> */}
                 </div>
               </div>
 

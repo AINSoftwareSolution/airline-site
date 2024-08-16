@@ -22,7 +22,7 @@ import destination11 from "./destinations/destination11.jpg";
 import destination12 from "./destinations/destination12.jpg";
 
 import experienceBg from "./section/bg-picture1.jpg";
-
+import heroBg from './section/hero-bg.jpg'
 import icon1 from "./icons/1.png";
 import icon2 from "./icons/2.png";
 import icon3 from "./icons/3.png";
@@ -38,6 +38,8 @@ import EasyImg from "./icons/easy-booking.svg";
 import LowestImg from "./icons/lowest-booking.svg";
 import ExcImg from "./icons/exc-deal.svg";
 import Support from "./icons/support.svg";
+import Caller from './icons/support-call.webp'
+import CallSupport from './icons/support-popup.webp'
 
 import Logo from "./logo/logo.png";
 import FooterLogo from "./logo/NameKart - Logo.png";
@@ -70,6 +72,7 @@ import TestimonialImage2 from "./landing/testimonial2.png";
 import TestimonialImage3 from "./landing/testimonial3.png";
 import OffersBg from './landing/offer-bg.jpg'
 
+
 // features//
 import AbuDhaabiImg from "./Features/abu-dhabi-img.jpg"
 import LondonImg from "./Features/Lomdon-img.jpg"
@@ -100,7 +103,9 @@ import  RecomandationImage6 from "./recommended/rome.jpeg"
 
 export {
   
+  CallSupport,
   bannerImage,
+  heroBg,
   experienceBg,
   Product01,
   Product02,
@@ -181,5 +186,6 @@ export {
   RecomandationImage3,
   RecomandationImage4,
   RecomandationImage5,
-  RecomandationImage6
+  RecomandationImage6,
+  Caller
 };

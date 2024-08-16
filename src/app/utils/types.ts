@@ -1,43 +1,3 @@
-export interface recommendedCardProps {
-  card: {
-    imgSrc: any;
-    offerTag: string;
-    tagColor: string;
-    title: string;
-    location: string;
-    rating: string;
-    reviews: string;
-    price: string;
-  };
-}
-
-interface Destination {
-  imgSrc: any;
-  destination: string;
-  hotels: number;
-}
-
-export interface DestinationCardProps {
-  destination: Destination;
-  handle: () => void;
-}
-
-interface RouteProps {
-  image: any;
-  departureTime: string;
-  departureAirport: string;
-  duration: string;
-  arrivalTime: string;
-  arrivalAirport: string;
-  price: string;
-  deals: number;
-}
-
-export interface RouteCardProps {
-  routes: RouteProps;
-  handle?: () => void;
-}
-
 export interface DropdownProps {
   title: React.ReactNode;
   items: { label: string; link: string }[];
@@ -89,9 +49,17 @@ export interface FormValues {
   stop_mode: boolean;
   class_mode: boolean;
   sectors: Sector[];
+  name:string;
+  email:string;
+  phone:string
 }
 
 export interface SearchEngineProps {
   handleToggle?:  () => void
+}
+
+export interface Heroprops {
+  title: string;
+  description: string
 }
 

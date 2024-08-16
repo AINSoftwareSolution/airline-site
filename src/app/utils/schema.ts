@@ -11,6 +11,9 @@ export const validationSchema = object({
   //     ? schema.required("Departure date is required")
   //     : schema.notRequired();
   // }),
+  name: string(),
+  email: string(),
+  phone: string(),
   travelers: object({
     adults: number()
       .min(1, "At least one adult is required")
@@ -22,30 +25,29 @@ export const validationSchema = object({
       .min(0, "Infants cannot be negative")
       .required("Infants field is required"),
   }),
-  sectors: array()
-    .of(
-      object({
-        departFrom: string(),
-        arrivalTo: string(),
-        departureDate: date(),
-      })
-    )
-    // .when("selectedTab", ([selectedTab], schema) => {
-    //   return selectedTab == "Multi City"
-    //     ? schema.min(1, "At least one sector is required for multi city trips")
-    //     : schema.notRequired();
-    // }),
+  sectors: array().of(
+    object({
+      departFrom: string(),
+      arrivalTo: string(),
+      departureDate: date(),
+    })
+  ),
+  // .when("selectedTab", ([selectedTab], schema) => {
+  //   return selectedTab == "Multi City"
+  //     ? schema.min(1, "At least one sector is required for multi city trips")
+  //     : schema.notRequired();
+  // }),
 });
 
 export const contactValidationSchema = object({
-  name: string().required('Full Name is required'),
-  email: string().email('Invalid email format').required('Email is required'),
-  phone: string().required('Phone Number is required'),
-  message: string().required('Message is required'),
-})
+  name: string().required("Full Name is required"),
+  email: string().email("Invalid email format").required("Email is required"),
+  phone: string().required("Phone Number is required"),
+  message: string().required("Message is required"),
+});
 
 export const LandingcontactValidationSchema = object({
-  name: string().required('Full Name is required'),
-  email: string().email('Invalid email format').required('Email is required'),
-  phone: string().required('Phone Number is required'),
-})
+  name: string().required("Full Name is required"),
+  email: string().email("Invalid email format").required("Email is required"),
+  phone: string().required("Phone Number is required"),
+});

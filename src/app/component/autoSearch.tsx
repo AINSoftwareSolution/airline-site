@@ -1,3 +1,4 @@
+'use client'
 import React, { useState } from "react";
 import { AutoSearchProps } from "../utils/types";
 import { airportData } from '../utils/airport';
