@@ -5,7 +5,7 @@ import { useFormik } from "formik";
 import { useRouter } from "next/navigation";
 import { contactInitialValues } from "../utils/data";
 import { contactValidationSchema } from "../utils/schema";
-
+import { Hero } from "../component";
 
 const Contact = () => {
   const router = useRouter()
@@ -41,13 +41,15 @@ const Contact = () => {
   const { handleChange, errors, handleSubmit, isSubmitting } = formik;
 
   return (
+    <>
+    <Hero title="Contact us" description="The best way to contact us is to use our contact form below."/>
+
     <section className="bg-light py-3 py-md-5">
+
       <div className="container">
         <div className="row justify-content-md-center">
           <div className="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
-            <h4 className="fs-2 fw-bold theme-text-secondary mb-2 text-center">Contact</h4>
             <p className="mb-0 theme-text-accent-one">
-              The best way to contact us is to use our contact form below.
               Please fill out all of the required fields and we will get back to
               you as soon as possible.
             </p>
@@ -157,6 +159,7 @@ const Contact = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 

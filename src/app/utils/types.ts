@@ -58,3 +58,8 @@ export interface SearchEngineProps {
   handleToggle?:  () => void
 }
 
+export interface Heroprops {
+  title: string;
+  description: string
+}
+

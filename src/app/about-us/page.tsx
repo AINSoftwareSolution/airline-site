@@ -1,10 +1,12 @@
 import React from "react";
 import Image from "next/image";
+import { Hero } from "../component";
 import {AboutusImg1,AboutusImg2,EasyImg,ExcImg,LowestImg,Support,} from "../utils/images";
 
 const About = () => {
   return (
     <>
+    <Hero title={'About us'} description={'Your dream travel just a phone call away!'} />
       <section className="pt-5 pt-lg-5 step-container">
         <div className="pb-md-4 mt-4 container">
           <div className="d-flex flex-column flex-md-row mb-0 w-100 mx-auto container-xl gap-4">
