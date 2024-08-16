@@ -1,37 +1,13 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
+
 import { useState } from "react";
-import { reviewsData } from "./utils/data";
-import { CallModal, } from "./component";
-import {
-  experienceBg,
-  Gallery1,
-  Gallery2,
-  Gallery3,
-  Gallery5,
-  AbuDhaabiImg,
-  LondonImg,
-  SydneyImg,
-  NewYorkImg,
-  GreenLAndImage,
-  GreeceImage,
-  DubaiDestinationImage,
-  AustraliyaImage,
-  ItalyImage,
-  LasVegasImage,
-  ThailandImage,
-  TokyoImage,
-  WashingtonDCImage,
-  HowItWorkImg1,
-  HowItWorkImg2,
-  HowItWorkImg3,
-  EasyImg,
-  ExcImg,
-  LowestImg,
-  Support,
-} from "./utils/images";
+
 import SearchEngine from "./container/searchEngine";
+import { CallModal, } from "./component";
+import { bestflightData, featuredDeals, flightDestinations, reviewsData, steps } from "./utils/data";
+import { experienceBg, Gallery1, Gallery2, Gallery3, Gallery5, EasyImg, ExcImg, LowestImg, Support, } from "./utils/images";
 
 const Home = () => {
   const [show, setShow] = useState<boolean>(false);
@@ -44,10 +20,7 @@ const Home = () => {
     <main>
       <div className="pagewrap" id="home">
         <div className="head-wrapper">
-          <div
-            className="search-engine"
-          // style={{ backgroundImage: `url(${bannerImage1.src})` }}
-          >
+          <div className="search-engine">
             <video autoPlay loop muted>
               <source src="/flight_video1.mp4" type="video/mp4" />
               Your browser does not support the video tag.
@@ -65,22 +38,12 @@ const Home = () => {
                     unfamiliar destinations consistently offer the tranquility
                     you have been seeking.
                   </p>
-
-                  {/* <button
-                    type="submit"
-                    className="btn btn-search mt-4 mb-6 me-2"
-                    onClick={handleToggle}
-                  >
-                    <span className="fw-bold"> Call Now</span>
-                  </button> */}
-                  {/* <PaymentMethod /> */}
                 </div>
               </div>
               <SearchEngine handleToggle={handleToggle} />
             </div>
           </div>
         </div>
-        {/*   <NewsLetter  /> */}
       </div>
 
       {/* Amazing travel deals section start */}
@@ -93,144 +56,29 @@ const Home = () => {
             </div>
           </div>
           <div className="row" data-aos="fade-down">
-            <div className="col-12 col-md-6 col-xl-4 mb-3">
-              <div className="card h-100 border-0 shadow-lg theme-bg-white theme-border-radius card-hover">
-                <div className="card-body">
-                  <h6 className="card-title fw-bold">Berlin BER<i className="bi bi-arrow-right mx-2"></i>Japan TYO</h6>
-                  <p className="card-text">Sun, 31/08 - Thu, 030/09</p>
-                  <div className="text-start">
-                    <span className="h5 fw-bold theme-text-primary" >
-                      <span className="small" style={{ color: '#0b97bf' }}>From</span> <i className="bi bi-currency-dollar"></i><span style={{ color: '#0b97bf' }}>940</span>
-                    </span>
+            {
+              bestflightData.map((flights) => (
+                <div className="col-12 col-md-6 col-xl-4 mb-3" key={flights.arriving}>
+                  <div className="card h-100 border-0 shadow-lg theme-bg-white theme-border-radius card-hover">
+                    <div className="card-body">
+                      <h6 className="card-title fw-bold">{flights.arriving}
+                        <i className="bi bi-arrow-right mx-2"></i>{flights.destination}</h6>
+                      <p className="card-text">{flights.date}</p>
+                      <div className="text-start">
+                        <span className="h5 fw-bold theme-text-primary" >
+                          <span className="small" style={{ color: '#0b97bf' }}>From</span>
+                          <i className="bi bi-currency-dollar"></i>
+                          <span style={{ color: '#0b97bf' }}>{flights.price}</span>
+                        </span>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-
-            {/* <!-- Repeatable Item --> */}
-            <div className="col-12 col-md-6 col-xl-4 mb-3">
-              <div className="card h-100 border-0 shadow-lg theme-bg-white theme-border-radius card-hover">
-                <div className="card-body">
-                  <h6 className="card-title fw-bold">Abu Dhabi UAE<i className="bi bi-arrow-right mx-2"></i>London City Airport</h6>
-                  <p className="card-text">Sun, 31/08 - Thu, 30/09</p>
-                  <div className="text-start">
-                    <span className="h5 fw-bold theme-text-secondary">
-                      <span className="small" style={{ color: '#0b97bf' }}>From</span> <i className="bi bi-currency-dollar"></i><span style={{ color: '#0b97bf' }}>830</span>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* <!-- Repeatable Item --> */}
-            <div className="col-12 col-md-6 col-xl-4 mb-3">
-              <div className="card h-100 border-0 shadow-lg theme-bg-white theme-border-radius card-hover">
-                <div className="card-body">
-                  <h6 className="card-title fw-bold">Denmark Copenhagen<i className="bi bi-arrow-right mx-2"></i>Norway Oslo</h6>
-                  <p className="card-text">Sat, 31/08 - Mon, 30/09</p>
-                  <div className="text-start">
-                    <span className="h5 fw-bold theme-text-secondary">
-                      <span className="small" style={{ color: '#0b97bf' }}>From</span> <i className="bi bi-currency-dollar"></i><span style={{ color: '#0b97bf' }}>1,198</span>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* <!-- Repeatable Item --> */}
-            <div className="col-12 col-md-6 col-xl-4 mb-3">
-              <div className="card h-100 border-0 shadow-lg theme-bg-white theme-border-radius card-hover">
-                <div className="card-body">
-                  <h6 className="card-title fw-bold">Glasgow, UK<i className="bi bi-arrow-right mx-2"></i>Australia, Sydney</h6>
-                  <p className="card-text">Sun, 10/09 - Thu, 31/10</p>
-                  <div className="text-start">
-                    <span className="h5 fw-bold theme-text-secondary">
-                      <span className="small" style={{ color: '#0b97bf' }}>From</span> <i className="bi bi-currency-dollar"></i><span style={{ color: '#0b97bf' }}>1,300</span>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* <!-- Repeatable Item --> */}
-            <div className="col-12 col-md-6 col-xl-4 mb-3">
-              <div className="card h-100 border-0 shadow-lg theme-bg-white theme-border-radius card-hover">
-                <div className="card-body">
-                  <h6 className="card-title fw-bold">Egypt, Cairo<i className="bi bi-arrow-right mx-2"></i>Greece, Athens</h6>
-                  <p className="card-text">Sun, 10/09 - Thu, 31/10</p>
-                  <div className="text-start">
-                    <span className="h5 fw-bold theme-text-secondary">
-                      <span className="small" style={{ color: '#0b97bf' }}>From</span> <i className="bi bi-currency-dollar"></i><span style={{ color: '#0b97bf' }}>425</span>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* 
-            <!-- Repeatable Item --> */}
-            <div className="col-12 col-md-6 col-xl-4 mb-3">
-              <div className="card h-100 border-0 shadow-lg theme-bg-white theme-border-radius card-hover">
-                <div className="card-body">
-                  <h6 className="card-title fw-bold">Bahamas, Freeport<i className="bi bi-arrow-right mx-2"></i>Spain, Barcelona</h6>
-                  <p className="card-text">Sun, 10/09 - Thu, 31/10</p>
-                  <div className="text-start">
-                    <span className="h5 fw-bold theme-text-secondary">
-                      <span className="small" style={{ color: '#0b97bf' }}>From</span> <i className="bi bi-currency-dollar"></i><span style={{ color: '#0b97bf' }}>2,130</span>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* <!-- Repeatable Item --> */}
-            <div className="col-12 col-md-6 col-xl-4 mb-3">
-              <div className="card h-100 border-0 shadow-lg theme-bg-white theme-border-radius card-hover">
-                <div className="card-body">
-                  <h6 className="card-title fw-bold">Las Vegas, USA<i className="bi bi-arrow-right mx-2"></i>New York, USA</h6>
-                  <p className="card-text">Sun, 10/09 - Thu, 31/10</p>
-                  <div className="text-start">
-                    <span className="h5 fw-bold theme-text-secondary">
-                      <span className="small" style={{ color: '#0b97bf' }}>From</span> <i className="bi bi-currency-dollar"></i><span style={{ color: '#0b97bf' }}>475</span>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* <!-- Repeatable Item --> */}
-            <div className="col-12 col-md-6 col-xl-4 mb-3">
-              <div className="card h-100 border-0 shadow-lg theme-bg-white theme-border-radius card-hover">
-                <div className="card-body">
-                  <h6 className="card-title fw-bold">San Francisco, SFO<i className="bi bi-arrow-right mx-2"></i>London, LHR</h6>
-                  <p className="card-text">Sun, 10/09 - Thu, 31/10</p>
-                  <div className="text-start">
-                    <span className="h5 fw-bold theme-text-secondary">
-                      <span className="small" style={{ color: '#0b97bf' }}>From</span> <i className="bi bi-currency-dollar"></i><span style={{ color: '#0b97bf' }}>1,140</span>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
-            <div className="col-12 col-md-6 col-xl-4 mb-3">
-              <div className="card h-100 border-0 shadow-lg theme-bg-white theme-border-radius card-hover">
-                <div className="card-body">
-                  <h6 className="card-title fw-bold">Paris, ORY<i className="bi bi-arrow-right mx-2"></i>New York JFK</h6>
-                  <p className="card-text">Sun, 10/09 - Thu, 31/10</p>
-                  <div className="text-start">
-                    <span className="h5 fw-bold theme-text-secondary">
-                      <span className="small" style={{ color: '#0b97bf' }}>From</span> <i className="bi bi-currency-dollar"></i><span style={{ color: '#0b97bf' }}>595</span>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
+              ))
+            }
           </div>
         </div>
       </section>
-
-      {/* Amazing travel deals section End */}
 
       {/* Features Section Starts */}
       <section className="featured-deal border-top py-5" id="featuredFlights">
@@ -244,70 +92,31 @@ const Home = () => {
           </div>
           {/* Featured Deals Grid */}
           <div className="row" data-aos="fade-down">
-            {/* Deal Card 1 */}
-            <div className="col-12 col-md-6 col-lg-3 mb-4">
-              <div className="card border-0 theme-box-shadow theme-border-radius h-100">
-                <div className="picHeight overflow-hidden theme-border-radius-top">
-                  <Image src={LondonImg} className="card-img-top img-fluid" alt="Deals One" title="Deals One" />
+            {
+              featuredDeals.map((deal) => (
+                <div className="col-12 col-md-6 col-lg-3 mb-4" key={deal.price}>
+                  <div className="card border-0 theme-box-shadow theme-border-radius h-100">
+                    <div className="picHeight overflow-hidden theme-border-radius-top">
+                      <Image src={deal.imageSrc} className="card-img-top img-fluid"
+                        alt={deal.imageAlt}
+                        title={deal.imageTitle} />
+                    </div>
+                    <div className="card-body theme-bg-white theme-border-radius-bottom">
+                      <span className="d-block theme-text-accent-one mb-2">{deal.destination}</span>
+                      <span className="d-flex font-small theme-text-accent-two mb-2">{deal.tripType}
+                        <span className="ms-1">{deal.class}</span></span>
+                      <span className="h6 fw-bold theme-text-primary" >
+                        <span className="small" style={{ color: '#0b97bf' }}>From</span>
+                        <i className="bi bi-currency-dollar"></i><span style={{ color: '#0b97bf' }}>{deal.price}</span>
+                      </span>
+                    </div>
+                  </div>
                 </div>
-                <div className="card-body theme-bg-white theme-border-radius-bottom">
-                  <span className="d-block theme-text-accent-one mb-2">London, UK</span>
-                  <span className="d-flex font-small theme-text-accent-two mb-2">Oneway Trip, <span className="ms-1">Economy</span></span>
-                  <span className="h6 fw-bold theme-text-primary" >
-                    <span className="small" style={{ color: '#0b97bf' }}>From</span> <i className="bi bi-currency-dollar"></i><span style={{ color: '#0b97bf' }}>330 USD</span>
-                  </span>
-                </div>
-              </div>
-            </div>
-            {/* Deal Card 2 */}
-            <div className="col-12 col-md-6 col-lg-3 mb-4">
-              <div className="card border-0 theme-box-shadow theme-border-radius h-100">
-                <div className="picHeight overflow-hidden theme-border-radius-top">
-                  <Image src={AbuDhaabiImg} className="card-img-top img-fluid" alt="Deals Two" title="Deals Two" />
-                </div>
-                <div className="card-body theme-bg-white theme-border-radius-bottom ">
-                  <span className=" d-block theme-text-accent-one fw-bold mb-2">Abu Dhabi, UAE</span>
-                  <span className="d-flex font-small theme-text-accent-two mb-2">Oneway Trip, <span className="ms-1">Economy</span></span>
-                  <span className="h6 fw-bold theme-text-primary" >
-                    <span className="small" style={{ color: '#0b97bf' }}>From</span> <i className="bi bi-currency-dollar"></i><span style={{ color: '#0b97bf' }}>180 USD</span>
-                  </span>
-                </div>
-              </div>
-            </div>
-            {/* Deal Card 3 */}
-            <div className="col-12 col-md-6 col-lg-3 mb-4">
-              <div className="card border-0 theme-box-shadow theme-border-radius h-100">
-                <div className="picHeight overflow-hidden theme-border-radius-top">
-                  <Image src={NewYorkImg} className="card-img-top img-fluid" alt="Deals Three" title="Deals Three" />
-                </div>
-                <div className="card-body theme-bg-white theme-border-radius-bottom">
-                  <span className="d-block theme-text-accent-one mb-2">New York, London</span>
-                  <span className="d-flex font-small theme-text-accent-two mb-2">Oneway Trip, <span className="ms-1">Economy</span></span>
-                  <span className="h6 fw-bold theme-text-primary" >
-                    <span className="small" style={{ color: '#0b97bf' }}>From</span> <i className="bi bi-currency-dollar"></i><span style={{ color: '#0b97bf' }}>220 USD</span>
-                  </span>
-                </div>
-              </div>
-            </div>
-            {/* Deal Card 4 */}
-            <div className="col-12 col-md-6 col-lg-3 mb-4">
-              <div className="card border-0 theme-box-shadow theme-border-radius h-100">
-                <div className="picHeight overflow-hidden theme-border-radius-top">
-                  <Image src={SydneyImg} className="card-img-top img-fluid" alt="Deals Four" title="Deals Four" />
-                </div>
-                <div className="card-body theme-bg-white theme-border-radius-bottom ">
-                  <span className="d-block theme-text-accent-one mb-2">Sydney, Australia</span>
-                  <span className="d-flex font-small theme-text-accent-two mb-2">Oneway Trip, <span className="ms-1">Economy</span></span>
-                  <span className="h6 fw-bold theme-text-primary" >
-                    <span className="small" style={{ color: '#0b97bf' }}>From</span> <i className="bi bi-currency-dollar"></i><span style={{ color: '#0b97bf' }}>340 USD</span>
-                  </span>
-                </div>
-              </div>
-            </div>
+              ))
+            }
           </div>
         </div>
       </section>
-
 
       {/* Why Book With Us */}
       <section id="whyBookWithUs">
@@ -344,7 +153,6 @@ const Home = () => {
                   />
                   <h5 className="card-title">Lowest Price</h5>
                   <p className="card-test">
-                    {" "}
                     We ensure low rates on hotel reservation, holiday packages
                     and on flight tickets.
                   </p>
@@ -400,135 +208,26 @@ const Home = () => {
           {/* <!-- Destination Cards --> */}
           <div className="row" data-aos="fade-up">
             {/* <!-- Repeatable Card Item --> */}
-            <div className="col-12 col-md-6 col-lg-4 mb-4">
-              <div className="card h-100 border-0 theme-box-shadow theme-border-radius overflow-hidden">
-                <div className="pictureHeight overflow-hidden theme-border-radius-top img-container">
-                  <Image src={GreenLAndImage} className="card-img-top img-fluid" alt="flight-destination-one" title="flight-destination-one" />
+            {
+              flightDestinations.map((destination) => (
+                <div className="col-12 col-md-6 col-lg-4 mb-4" key={destination.title}>
+                  <div className="card h-100 border-0 theme-box-shadow theme-border-radius overflow-hidden">
+                    <div className="pictureHeight overflow-hidden theme-border-radius-top img-container">
+                      <Image src={destination.imageSrc} className="card-img-top img-fluid"
+                        alt={destination.imageAlt} title={destination.imageTitle} />
+                    </div>
+                    <div className="card-body">
+                      <h5 className="card-title fw-bold">{destination.title}</h5>
+                      <p className="card-text theme-text-accent-two">{destination.description}</p>
+                      <a href="#" className="text-link text-link-effect">Book Now</a>
+                    </div>
+                  </div>
                 </div>
-                <div className="card-body">
-                  <h5 className="card-title fw-bold">Emirates flight to Greenland</h5>
-                  <p className="card-text theme-text-accent-two">Book your favorite itinerary at the best price</p>
-                  <a href="#" className="text-link text-link-effect">Book Now</a>
-                </div>
-              </div>
-            </div>
-
-            {/* <!-- Repeatable Card Item --> */}
-            <div className="col-12 col-md-6 col-lg-4 mb-4">
-              <div className="card h-100 border-0 theme-box-shadow theme-border-radius overflow-hidden">
-                <div className=" picHeight overflow-hidden theme-border-radius-top img-container">
-                  <Image src={DubaiDestinationImage} className="card-img-top img-fluid" alt="flight-destination-two" title="flight-destination-two" />
-                </div>
-                <div className="card-body">
-                  <h5 className="card-title fw-bold">Qatar Airways Flights to Dubai</h5>
-                  <p className="card-text theme-text-accent-two">Book your favorite itinerary at the best price</p>
-                  <a href="#" className="text-link text-link-effect">Book Now</a>
-                </div>
-              </div>
-            </div>
-
-            {/* <!-- Repeatable Card Item --> */}
-            <div className="col-12 col-md-6 col-lg-4 mb-4">
-              <div className="card h-100 border-0 theme-box-shadow theme-border-radius overflow-hidden">
-                <div className=" thailand overflow-hidden theme-border-radius-top img-container">
-                  <Image src={ThailandImage} className="card-img-top img-fluid" alt="flight-destination-three" title="flight-destination-three" />
-                </div>
-                <div className="card-body mt-1">
-                  <h5 className="card-title fw-bold">Singapore Airlines to Thailand</h5>
-                  <p className="card-text theme-text-accent-two">Book your favorite itinerary at the best price</p>
-                  <a href="#" className="text-link text-link-effect ">Book Now</a>
-                </div>
-              </div>
-            </div>
-
-            {/* <!-- Repeatable Card Item --> */}
-            <div className="col-12 col-md-6 col-lg-4 mb-4">
-              <div className="card h-100 border-0 theme-box-shadow theme-border-radius overflow-hidden">
-                <div className="tokyo overflow-hidden theme-border-radius-top img-container">
-                  <Image src={TokyoImage} className="card-img-top img-fluid" alt="flight-destination-four" title="flight-destination-four" />
-                </div>
-                <div className="card-body">
-                  <h5 className="card-title fw-bold">Cathay Pacific Airways to Tokyo</h5>
-                  <p className="card-text theme-text-accent-two">Book your favorite itinerary at the best price</p>
-                  <a href="#" className="text-link text-link-effect">Book Now</a>
-                </div>
-              </div>
-            </div>
-
-            {/* <!-- Repeatable Card Item --> */}
-            <div className="col-12 col-md-6 col-lg-4 mb-4">
-              <div className="card h-100 border-0 theme-box-shadow theme-border-radius overflow-hidden">
-                <div className=" australia overflow-hidden theme-border-radius-top img-container">
-                  <Image src={AustraliyaImage} className="card-img-top img-fluid" alt="flight-destination-four" title="flight-destination-four" />
-                </div>
-                <div className="card-body">
-                  <h5 className="card-title fw-bold">Qantas Airways to Australia</h5>
-                  <p className="card-text theme-text-accent-two">Book your favorite itinerary at the best price</p>
-                  <a href="#" className="text-link text-link-effect">Book Now</a>
-                </div>
-              </div>
-            </div>
-
-            {/* <!-- Repeatable Card Item --> */}
-            <div className="col-12 col-md-6 col-lg-4 mb-4">
-              <div className="card h-100 border-0 theme-box-shadow theme-border-radius overflow-hidden">
-                <div className="overflow-hidden theme-border-radius-top img-container">
-                  <Image src={WashingtonDCImage} className="card-img-top img-fluid" alt="flight-destination-four" title="flight-destination-four" />
-                </div>
-                <div className="card-body">
-                  <h5 className="card-title fw-bold">EVA Air to Washington DC</h5>
-                  <p className="card-text theme-text-accent-two">Book your favorite itinerary at the best price</p>
-                  <a href="#" className="text-link text-link-effect">Book Now</a>
-                </div>
-              </div>
-            </div>
-
-            {/* <!-- Repeatable Card Item --> */}
-            <div className="col-12 col-md-6 col-lg-4 mb-4">
-              <div className="card h-100 border-0 theme-box-shadow theme-border-radius overflow-hidden">
-                <div className="overflow-hidden theme-border-radius-top img-container">
-                  <Image src={LasVegasImage} className="card-img-top img-fluid" alt="flight-destination-four" title="flight-destination-four" />
-                </div>
-                <div className="card-body">
-                  <h5 className="card-title fw-bold">Egypt Air to Las Vegas</h5>
-                  <p className="card-text theme-text-accent-two">Book your favorite itinerary at the best price</p>
-                  <a href="#" className="text-link text-link-effect">Book Now</a>
-                </div>
-              </div>
-            </div>
-
-            {/* <!-- Repeatable Card Item --> */}
-            <div className="col-12 col-md-6 col-lg-4 mb-4">
-              <div className="card h-100 border-0 theme-box-shadow theme-border-radius overflow-hidden">
-                <div className="overflow-hidden theme-border-radius-top img-container">
-                  <Image src={ItalyImage} className="card-img-top img-fluid" alt="flight-destination-four" title="flight-destination-four" />
-                </div>
-                <div className="card-body">
-                  <h5 className="card-title fw-bold">Night in Vernazza Italy Vacation</h5>
-                  <p className="card-text theme-text-accent-two">Book your favorite itinerary at the best price</p>
-                  <a href="#" className="text-link text-link-effect">Book Now</a>
-                </div>
-              </div>
-            </div>
-
-            {/* <!-- Repeatable Card Item --> */}
-            <div className="col-12 col-md-6 col-lg-4 mb-4">
-              <div className="card h-100 border-0 theme-box-shadow theme-border-radius overflow-hidden">
-                <div className="overflow-hidden theme-border-radius-top img-container">
-                  <Image src={GreeceImage} className="card-img-top img-fluid" alt="flight-destination-four" title="flight-destination-four" />
-                </div>
-                <div className="card-body">
-                  <h5 className="card-title fw-bold">Egypt to Greece</h5>
-                  <p className="card-text theme-text-accent-two">Book your favorite itinerary at the best price</p>
-                  <a href="#" className="text-link text-link-effect">Book Now</a>
-                </div>
-              </div>
-            </div>
+              ))
+            }
           </div>
         </div>
       </section>
-
-      {/*  Most Destination place end  */}
 
       {/* How it Work  start */}
       <section className="py-5 bg-white border-top" id="howWork">
@@ -541,58 +240,23 @@ const Home = () => {
               <p className="font-small fw-bold text-accent-one mb-0">Search &amp; Book in 3 Simple Steps</p>
             </div>
 
-            {/* <!-- Step 1 --> */}
-            <div className="col-12 col-lg-3 mb-4 mb-lg-0 aos-init aos-animate" data-aos="fade-left">
-              <div className="text-center shadow-lg border-radius process-card hover-bg-light p-4">
-                <Image
-                  src={HowItWorkImg1}
-                  className="w-40 mb-2"
-                  height={60}
-                  alt="easy booking"
-                />
-                {/* <!-- SVG content --> */}
-
-                <p className="pt-4 pb-2 mb-0">Select your flight</p>
-                <p className="mb-0 pb-5 text-accent-two">&amp; tell us your preferences</p>
-                <div className="step-corner">
-                  <div className="step-arrow"></div>
+            {steps.map((step) => (
+              <div key={step.id} className="col-12 col-lg-3 mb-4 mb-lg-0 aos-init aos-animate">
+                <div className="text-center shadow-lg border-radius process-card hover-bg-light p-4">
+                  <Image
+                    src={step.imageSrc}
+                    className="w-40 mb-2"
+                    height={60}
+                    alt={step.imageAlt}
+                  />
+                  <p className="pt-4 pb-2 mb-0">{step.stepTitle}</p>
+                  <p className="mb-0 pb-5 text-accent-two">{step.stepDescription}</p>
+                  <div className="step-corner">
+                    <div className="step-arrow">{step.id}</div>
+                  </div>
                 </div>
               </div>
-            </div>
-
-            {/* <!-- Step 2 --> */}
-            <div className="col-12 col-lg-3 mb-4 mb-lg-0 aos-init aos-animate" data-aos="fade-left">
-              <div className=" h-100 text-center shadow-lg border-radius process-card hover-bg-light p-4">
-                <Image
-                  src={HowItWorkImg2}
-                  className="w-40 mb-2 rounded-full"
-                  height={60}
-                  alt="easy booking"
-                />
-                <p className="pt-4 pb-2 mb-0">Get multiple fare deals</p>
-                <p className="mb-0 pb-5 text-accent-two">from verified travel experts</p>
-                <div className="step-corner">
-                  <div className="step-arrow">2</div>
-                </div>
-              </div>
-            </div>
-
-            {/* <!-- Step 3 --> */}
-            <div className="col-12 col-lg-3 mb-4 mb-lg-0 aos-init aos-animate" data-aos="fade-left">
-              <div className="text-center shadow-lg border-radius process-card hover-bg-light p-4">
-                <Image
-                  src={HowItWorkImg3}
-                  className="w-40 mb-2 rounded-full"
-                  height={60}
-                  alt="easy booking"
-                />
-                <p className="pt-4 pb-2 mb-0">Customize &amp; book</p>
-                <p className="mb-0 pb-5 text-accent-two">a perfect travel experience</p>
-                <div className="step-corner">
-                  <div className="step-arrow">3</div>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -684,6 +348,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+
       {/* review */}
       <section className="my-4" id="reviews">
         <div className='container'>
@@ -713,6 +378,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+
       { /* call us modal */}
       <CallModal show={show} handleClose={handleToggle} setShow={setShow} />
     </main>
