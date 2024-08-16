@@ -1447,3 +1447,31 @@ button.btn {
 
 /* Recommendation section  */
 
+ .nevada{
+  height: 240px;
+  overflow: hidden;
+  border-radius: 8px 8px 0 0; 
+}
+
+
+.recom-sec .card-body {
+    z-index: 2;
+}
+
+.recom-sec .card-img-top {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.recom-sec .card:hover .card-img-top {
+    transform: scale(1.05); /* Slight zoom */
+    opacity: 0.85; /* Slight opacity change */
+}
+
+.recom-sec .card-body h6,
+.recom-sec .card-body span {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+

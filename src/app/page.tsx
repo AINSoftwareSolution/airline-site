@@ -985,9 +985,93 @@ const Home = () => {
       </section> */}
 
       {/* Recommandation section Start */}
-       
-  
-        
+     
+<section className="recom-sec py-5 border-top" id="Recommendations">
+    <div className="container">
+        <div className="row my-5">
+            <div className="col-12" data-aos="fade-up" data-aos-delay="200">
+                <p className="text-center text-primary mb-3">
+                    <span className="ribbon">Recommendations</span>
+                </p>
+                <h5 className="text-secondary h3 fw-bold text-center mb-0">Only Unique Experiences</h5>
+            </div>
+        </div>
+        <div className="row">
+            {/* Recommendation Card */}
+            <div className="col-12 col-md-4 mb-4" data-aos="fade-down" data-aos-delay="300">
+                <div className=" card border-0 rounded-3 shadow-sm item-effect position-relative">
+                    <Image src={RecomandationImage1} className="card-img-top"  alt="Unique Experience One" title="Unique Experience One" />
+                    <div className="card-body position-absolute top-0 start-0 p-3">
+                        <h6 className="card-title fw-bold text-white">New York, United States</h6>
+                        <span className="d-flex text-white font-14">Get prices</span>
+                    </div>
+                    <a href="#" className="stretched-link"></a>
+                </div>
+            </div>
+
+            <div className="col-12 col-md-4 mb-4" data-aos="fade-down" data-aos-delay="300">
+                <div className="card border-0 rounded-3 shadow-sm item-effect position-relative">
+                    <Image src={RecomandationImage2} className="card-img-top img-fluid" alt="Unique Experience One" title="Unique Experience One" />
+                    <div className="card-body position-absolute top-0 start-0 p-3">
+                        <h6 className="card-title fw-bold text-white">Cusco, Peru</h6>
+                        <span className="d-flex text-white font-14">Get prices</span>
+                    </div>
+                    <a href="#" className="stretched-link"></a>
+                </div>
+            </div>
+
+            <div className="col-12 col-md-4 mb-4" data-aos="fade-down" data-aos-delay="300">
+                <div className=" nevada card border-0 rounded-3 shadow-sm item-effect position-relative">
+                    <Image src={RecomandationImage3} className="card-img-top img-fluid" alt="Unique Experience One" title="Unique Experience One" />
+                    <div className="card-body position-absolute top-0 start-0 p-3">
+                        <h6 className="card-title fw-bold text-white">New York, United States</h6>
+                        <span className="d-flex text-white font-14">Get prices</span>
+                    </div>
+                    <a href="#" className="stretched-link"></a>
+                </div>
+            </div>
+
+            <div className="col-12 col-md-4 mb-4" data-aos="fade-down" data-aos-delay="300">
+                <div className="card border-0 rounded-3 shadow-sm item-effect position-relative">
+                    <Image src={RecomandationImage4} className="card-img-top img-fluid" alt="Unique Experience One" title="Unique Experience One" />
+                    <div className="card-body position-absolute top-0 start-0 p-3">
+                        <h6 className="card-title fw-bold text-white">New York, United States</h6>
+                        <span className="d-flex text-white font-14">Get prices</span>
+                    </div>
+                    <a href="#" className="stretched-link"></a>
+                </div>
+            </div>
+            
+            <div className="col-12 col-md-4 mb-4" data-aos="fade-down" data-aos-delay="300">
+                <div className="card border-0 rounded-3 shadow-sm item-effect position-relative">
+                    <Image src={RecomandationImage5} className="card-img-top img-fluid" alt="Unique Experience One" title="Unique Experience One" />
+                    <div className="card-body position-absolute top-0 start-0 p-3">
+                        <h6 className="card-title fw-bold text-white">New York, United States</h6>
+                        <span className="d-flex text-white font-14">Get prices</span>
+                    </div>
+                    <a href="#" className="stretched-link"></a>
+                </div>
+            </div>
+            <div className="col-12 col-md-4 mb-4" data-aos="fade-down" data-aos-delay="300">
+                <div className="card border-0 rounded-3 shadow-sm item-effect position-relative">
+                    <Image src={RecomandationImage6} className="card-img-top img-fluid" alt="Unique Experience One" title="Unique Experience One" />
+                    <div className="card-body position-absolute top-0 start-0 p-3">
+                        <h6 className="card-title fw-bold text-white">New York, United States</h6>
+                        <span className="d-flex text-white font-14">Get prices</span>
+                    </div>
+                    <a href="#" className="stretched-link"></a>
+                </div>
+            </div>
+
+        </div>
+        <div className="row my-4">
+            <div className="col-12 text-center">
+                <a href="blog.html" className="btn btn-outline-primary">See more Popular Experiences</a>
+            </div>
+        </div>
+    </div>
+</section>
+
 
      
       { /* call us modal */}

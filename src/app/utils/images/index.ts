@@ -90,16 +90,16 @@ import HowItWorkImg2 from "./how-it-work/img2.avif"
 import HowItWorkImg3 from "./how-it-work/passport.png"
 
 // Recomendation //
-import RecomandationImage1 from "./recommended/Rec-img1.jpg"
-import RecomandationImage2 from "./recommended/rec-img2.jpeg"
-import  RecomandationImage3 from "./recommended/rec-img3.jpeg"
-import  RecomandationImage4 from "./recommended/rec-img4.jpeg"
+import RecomandationImage1 from "./recommended/newyork.jpeg"
+import RecomandationImage2 from "./recommended/peru.jpeg"
+import  RecomandationImage3 from "./recommended/nevada.jpeg"
+import  RecomandationImage4 from "./recommended/london.jpeg"
 import  RecomandationImage5 from "./recommended/rec-img5.jpg"
-import  RecomandationImage6 from "./recommended/rec-img6.jpeg"
+import  RecomandationImage6 from "./recommended/rome.jpeg"
 
 
 export {
- 
+  
   bannerImage,
   experienceBg,
   Product01,
