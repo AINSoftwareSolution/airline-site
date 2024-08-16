@@ -219,7 +219,7 @@ const Home = () => {
                     <div className="card-body">
                       <h5 className="card-title fw-bold">{destination.title}</h5>
                       <p className="card-text theme-text-accent-two">{destination.description}</p>
-                      <a href="#" className="text-link text-link-effect">Book Now</a>
+                      <Link href="#" className="text-link text-link-effect">Book Now</Link>
                     </div>
                   </div>
                 </div>
