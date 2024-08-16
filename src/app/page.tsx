@@ -362,13 +362,6 @@ const Home = () => {
               </div>
             ))}
           </div>
-          <div className="row my-4">
-            <div className="col-12 text-center">
-              <a href="blog.html" className="btn btn-outline-primary">
-                See more Popular Experiences
-              </a>
-            </div>
-          </div>
         </div>
       </section>
 
