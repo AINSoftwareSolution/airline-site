@@ -324,7 +324,7 @@ a:hover {
 
 @media screen and (max-width: 992px) {
   .search-engine {
-    padding: 1rem 0;
+    padding: 7rem 0;
     background-attachment: fixed;
   }
 }
@@ -1294,8 +1294,23 @@ button.btn {
 }
 
 
-.hero{
+.hero {
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 7rem 0rem;
+  padding: 8rem 0rem;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #2290a6;
+  background: linear-gradient(180deg, rgba(3, 147, 210, 0.3281687675) 0%, rgba(0, 0, 0, 0.762342437) 100%);
+  z-index: -1; /* Place it behind the content */
 }

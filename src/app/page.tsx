@@ -6,19 +6,8 @@ import { useState } from "react";
 
 import SearchEngine from "./container/searchEngine";
 import { CallModal } from "./component";
+import { bestflightData, featuredDeals, flightDestinations, recommendations, steps, } from "./utils/data";
 import {
-  bestflightData,
-  featuredDeals,
-  flightDestinations,
-  reviewsData,
-  steps,
-} from "./utils/data";
-import {
-  experienceBg,
-  Gallery1,
-  Gallery2,
-  Gallery3,
-  Gallery5,
   EasyImg,
   ExcImg,
   LowestImg,
@@ -335,47 +324,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* review */}
-      <section className="my-4" id="reviews">
-        <div className="container">
-          <div className="row">
-            <div className="col-12 text-center mb-5">
-              <h4 className="fs-2 fw-bold theme-text-secondary mb-0">
-                Hear From Our Happy Customers
-              </h4>
-              <p className="mb-0 theme-text-accent-one">
-                Discover what makes our service exceptional through real
-                customer experiences
-              </p>
-            </div>
-          </div>
-          <div className="row">
-            {reviewsData.map((review, index) => (
-              <div className="col-md-4 mb-5 mb-md-0" key={index}>
-                <h5 className="fw-bold mb-0">{review.name}</h5>
-                <ul className="list-unstyled d-flex gap-1">
-                  {[...Array(Math.floor(review.rating))].map((_, i) => (
-                    <li key={i}>
-                      <i className="fa-sm text-warning bi bi-star-fill" />
-                    </li>
-                  ))}
-                  {review.rating % 1 !== 0 && (
-                    <li>
-                      <i className="fa-sm text-warning bi bi-star-half" />
-                    </li>
-                  )}
-                </ul>
-                <p className="mt-2">
-                  <i className="bi bi-quote" /> {review.review}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Recommandation section Start */}
-
       <section className="recom-sec py-5 border-top" id="Recommendations">
         <div className="container">
           <div className="row my-5">
@@ -389,138 +338,33 @@ const Home = () => {
             </div>
           </div>
           <div className="row">
-            {/* Recommendation Card */}
-            <div
-              className="col-12 col-md-4 mb-4"
-              data-aos="fade-down"
-              data-aos-delay="300"
-            >
-              <div className=" card border-0 rounded-3 shadow-sm item-effect position-relative">
-                <Image
-                  src={RecomandationImage1}
-                  className="card-img-top"
-                  alt="Unique Experience One"
-                  title="Unique Experience One"
-                />
-                <div className="card-body position-absolute top-0 start-0 p-3">
-                  <h6 className="card-title fw-bold text-white">
-                    New York, United States
-                  </h6>
-                  <span className="d-flex text-white font-14">Get prices</span>
+            {recommendations.map((item, index) => (
+              <div
+                className="col-12 col-md-4 mb-4"
+                data-aos="fade-down"
+                data-aos-delay={300 + index * 100}
+                key={index}
+              >
+                <div className="card border-0 rounded-3 shadow-sm item-effect position-relative">
+                  <Image
+                    src={item.image}
+                    className="card-img-top img-fluid"
+                    alt={item.alt}
+                    title={item.title}
+                    style={{ objectFit: "cover", height: "250px", width: "100%" }}
+                  />
+                  <div className="card-body position-absolute top-0 start-0 p-3">
+                    <h6 className="card-title fw-bold text-white">{item.title}</h6>
+                    <span className="d-flex text-white font-14">Get prices</span>
+                  </div>
+                  <a href={item.link} className="stretched-link"></a>
                 </div>
-                <a href="#" className="stretched-link"></a>
               </div>
-            </div>
-
-            <div
-              className="col-12 col-md-4 mb-4"
-              data-aos="fade-down"
-              data-aos-delay="300"
-            >
-              <div className="card border-0 rounded-3 shadow-sm item-effect position-relative">
-                <Image
-                  src={RecomandationImage2}
-                  className="card-img-top img-fluid"
-                  alt="Unique Experience One"
-                  title="Unique Experience One"
-                />
-                <div className="card-body position-absolute top-0 start-0 p-3">
-                  <h6 className="card-title fw-bold text-white">Cusco, Peru</h6>
-                  <span className="d-flex text-white font-14">Get prices</span>
-                </div>
-                <a href="#" className="stretched-link"></a>
-              </div>
-            </div>
-
-            <div
-              className="col-12 col-md-4 mb-4"
-              data-aos="fade-down"
-              data-aos-delay="300"
-            >
-              <div className=" nevada card border-0 rounded-3 shadow-sm item-effect position-relative">
-                <Image
-                  src={RecomandationImage3}
-                  className="card-img-top img-fluid"
-                  alt="Unique Experience One"
-                  title="Unique Experience One"
-                />
-                <div className="card-body position-absolute top-0 start-0 p-3">
-                  <h6 className="card-title fw-bold text-white">
-                    New York, United States
-                  </h6>
-                  <span className="d-flex text-white font-14">Get prices</span>
-                </div>
-                <a href="#" className="stretched-link"></a>
-              </div>
-            </div>
-
-            <div
-              className="col-12 col-md-4 mb-4"
-              data-aos="fade-down"
-              data-aos-delay="300"
-            >
-              <div className="card border-0 rounded-3 shadow-sm item-effect position-relative">
-                <Image
-                  src={RecomandationImage4}
-                  className="card-img-top img-fluid"
-                  alt="Unique Experience One"
-                  title="Unique Experience One"
-                />
-                <div className="card-body position-absolute top-0 start-0 p-3">
-                  <h6 className="card-title fw-bold text-white">
-                    New York, United States
-                  </h6>
-                  <span className="d-flex text-white font-14">Get prices</span>
-                </div>
-                <a href="#" className="stretched-link"></a>
-              </div>
-            </div>
-
-            <div
-              className="col-12 col-md-4 mb-4"
-              data-aos="fade-down"
-              data-aos-delay="300"
-            >
-              <div className="card border-0 rounded-3 shadow-sm item-effect position-relative">
-                <Image
-                  src={RecomandationImage5}
-                  className="card-img-top img-fluid"
-                  alt="Unique Experience One"
-                  title="Unique Experience One"
-                />
-                <div className="card-body position-absolute top-0 start-0 p-3">
-                  <h6 className="card-title fw-bold text-white">
-                    New York, United States
-                  </h6>
-                  <span className="d-flex text-white font-14">Get prices</span>
-                </div>
-                <a href="#" className="stretched-link"></a>
-              </div>
-            </div>
-            <div
-              className="col-12 col-md-4 mb-4"
-              data-aos="fade-down"
-              data-aos-delay="300"
-            >
-              <div className="card border-0 rounded-3 shadow-sm item-effect position-relative">
-                <Image
-                  src={RecomandationImage6}
-                  className="card-img-top img-fluid"
-                  alt="Unique Experience One"
-                  title="Unique Experience One"
-                />
-                <div className="card-body position-absolute top-0 start-0 p-3">
-                  <h6 className="card-title fw-bold text-white">
-                    New York, United States
-                  </h6>
-                  <span className="d-flex text-white font-14">Get prices</span>
-                </div>
-                <a href="#" className="stretched-link"></a>
-              </div>
-            </div>
-          </div>  
+            ))}
+          </div>
         </div>
       </section>
+
       {/* call us modal */}
       <CallModal show={show} handleClose={handleToggle} setShow={setShow} />
     </main>
