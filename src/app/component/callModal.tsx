@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 import { Modalprops } from '../utils/types';
 import { CallSupport } from '../utils/images';
 
-const callModal: React.FC<Modalprops> = ({ show, handleClose, setShow, ispath = true }) => {
+const CallModal: React.FC<Modalprops> = ({ show, handleClose, setShow, ispath = true }) => {
 
 
   useEffect(() => {
@@ -58,4 +58,4 @@ const callModal: React.FC<Modalprops> = ({ show, handleClose, setShow, ispath = 
   );
 };
 
-export default callModal;
+export default CallModal;
