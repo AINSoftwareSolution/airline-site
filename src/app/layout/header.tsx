@@ -1,21 +1,37 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { FooterLogo, Logo, PCCiIcon } from "../utils/images";
 
 const Header = () => {
   const [collapsed, setCollapsed] = useState(true);
-  const path = usePathname()
-
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const path = usePathname();
 
   const toggleNavbar = () => {
     setCollapsed(!collapsed);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollPosition(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <header className={`header theme-bg-white sticky-top`}>
+    <header
+      className={`header fixed-top ${scrollPosition > 0 ? "bg-white" : "bg-transparent"
+        }`}
+      style={{ transition: "background-color 0.3s ease" }}
+    >
       <div className="container">
         <nav className="navbar navbar-expand-lg py-3 py-lg-0 px-0">
           <Link href="/" className="navbar-brand py-3">
@@ -46,46 +62,38 @@ const Header = () => {
           >
             <ul className="navbar-nav me-auto page-menu" id="nav"></ul>
             <ul className="navbar-nav page-menu mb-3 mb-lg-0">
-
-              <li className="nav-item">
-                <Link className="nav-link pe-4 ps-0 ps-lg-5" href="/">
+              <li className="nav-item ">
+                <Link className={`nav-link pe-4 ps-0 ps-lg-5 ${scrollPosition > 0 ? 'text-dark' : 'text-white'}`} href="/">
                   Home
                 </Link>
               </li>
-            {/*  <li className="nav-item">
-                <Link className="nav-link pe-4 " href="/about-us">
+              <li className="nav-item">
+                <Link className={`${scrollPosition > 0 ? 'text-dark' : 'text-white'} nav-link pe-4`} href="/about-us">
                   About
                 </Link>
-              </li>   */}
-
-
+              </li>
               <li className="nav-item">
-                <Link className="nav-link pe-4" href="/#gallery">
+                <Link className={`${scrollPosition > 0 ? 'text-dark' : 'text-white'} nav-link pe-4`} href="/#gallery">
                   Gallery
                 </Link>
               </li>
-
               <li className="nav-item">
-                <Link className="nav-link pe-4" href="/contact">
+                <Link className={` ${scrollPosition > 0 ? 'text-dark' : 'text-white' } nav-link pe-4`} href="/contact">
                   Contact
                 </Link>
               </li>
-
               <Link
                 href="tel:1888 5087143"
-                style={{ color: "#2290a6" }}
-                className="d-flex flex-row justify-content-center align-items-center gap-2 fw-bold nav-item pe-4"
+                className="d-flex flex-row justify-content-center align-items-center gap-2 fw-bold nav-item pe-4 text-yellow"
               >
                 <i className="bi bi-telephone"></i>
                 <div>1888 5087143</div>
               </Link>
-
               <div className="img-fluid d-flex justify-content-center align-items-center">
                 <Link href="/compliance_certificate.pdf" target="_blank">
                   <Image src={PCCiIcon} alt="PCI DSS Certified" height={50} />
                 </Link>
               </div>
-
               {/* <Dropdown title={<><i className="bi bi-globe me-2"></i>Eng</>} items={languageItems} />
               <Dropdown title="INR" items={currencyItems} />
               <li className="nav-item">

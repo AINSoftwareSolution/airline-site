@@ -22,7 +22,7 @@ import destination11 from "./destinations/destination11.jpg";
 import destination12 from "./destinations/destination12.jpg";
 
 import experienceBg from "./section/bg-picture1.jpg";
-
+import heroBg from './section/hero-bg.jpg'
 import icon1 from "./icons/1.png";
 import icon2 from "./icons/2.png";
 import icon3 from "./icons/3.png";
@@ -39,6 +39,7 @@ import LowestImg from "./icons/lowest-booking.svg";
 import ExcImg from "./icons/exc-deal.svg";
 import Support from "./icons/support.svg";
 import Caller from './icons/support-call.webp'
+import CallSupport from './icons/support-popup.webp'
 
 import Logo from "./logo/logo.png";
 import FooterLogo from "./logo/NameKart - Logo.png";
@@ -93,8 +94,9 @@ import HowItWorkImg3 from "./how-it-work/passport.png"
 
 
 export {
- 
+  CallSupport,
   bannerImage,
+  heroBg,
   experienceBg,
   Product01,
   Product02,
