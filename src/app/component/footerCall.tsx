@@ -1,11 +1,12 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { Caller } from '../utils/images'
 
 const footerCall = () => {
     return (
         <div id="back-top" className="back-to-top">
-            <a href="tel:1888 5087143">
+            <Link href="tel:1888 5087143">
                 <span className="d-flex align-items-center">
                     <figure className="flex-shrink-0 mb-0">
                         <Image alt="call support" src={Caller} className="img-fluid" 
@@ -16,7 +17,7 @@ const footerCall = () => {
                         <span className="theme-text-primary"> 1888 5087143</span>
                     </p>
                 </span>
-            </a>
+            </Link>
         </div>
     )
 }
