@@ -9,7 +9,7 @@ import {
   paymentMethod1,
 } from "../utils/images";
 
-const Footer = () => {
+const footer = () => {
   const [isActive, setIsActive] = useState(false);
   const [email, setEmail] = useState("");
 
@@ -224,4 +224,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default footer;

@@ -174,9 +174,10 @@ a:hover {
     box-shadow: 0 0 0 0 rgba(1, 93, 199, 0);
   }
 }
-
-
-
+.img-container img {
+  position: relative; /* Ensure the main image stays above the background */
+  z-index: 1;
+}
 .theme-btn-outline {
   background-color: #ffffff;
   color: #2290a6;
@@ -1312,5 +1313,11 @@ button.btn {
   height: 100%;
   background: #2290a6;
   background: linear-gradient(180deg, rgba(3, 147, 210, 0.3281687675) 0%, rgba(0, 0, 0, 0.762342437) 100%);
-  z-index: -1; /* Place it behind the content */
+  z-index: -1;
+}
+.circle {
+  width: 100px; /* Adjust width as needed */
+  height: 100px; /* Ensure height matches width for a perfect circle */
+  border-radius: 75%; /* Makes the image circular */
+  object-fit: cover; /* Ensures the image covers the circle without distortion */
 }
