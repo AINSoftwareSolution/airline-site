@@ -1,14 +1,10 @@
 import AutoSearch from "./autoSearch";
 import CallModal from "./callModal";
-import DestinationCard from "./destinationCard";
+import Counter from './counter'
 import Dropdown from "./dropDown";
-import RecommendedCard from "./recommendedCard";
-import RouteCard from "./routeCard";
+import FooterCall from "./footerCall";
 import NewsLetter from "./newsLetter";
 import PaymentMethod from "./paymentMethod";
-import Counter from "./counter";
 
 
-
-
-export { AutoSearch , CallModal, Counter ,DestinationCard, Dropdown, RecommendedCard, RouteCard, NewsLetter, PaymentMethod,}
+export { AutoSearch , CallModal, Counter , Dropdown, FooterCall, NewsLetter, PaymentMethod,}
