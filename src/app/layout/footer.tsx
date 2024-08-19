@@ -170,7 +170,7 @@ const Footer = () => {
               <div className="mt-3">
                 <ul className="fl-menu">
                   <li className="nav-item ">
-                    <Link href="#" className="fs-8 text-dark">Contact</Link>
+                    <Link href="/contact" className="fs-8 text-dark">Contact</Link>
                   </li>
                   <li className="nav-item">
                     <Link href="/privacy-policy" className="fs-8 text-dark">Privacy Policy</Link>

@@ -1,6 +1,4 @@
 import bannerImage from "./section/bg-pic.png";
-import Product01 from "./section/product-banner01.png";
-import Product02 from "./section/product-banner02.png";
 import PopupBg from "./section/popup-bg.png";
 import recommended1 from "./recommended/offers01.png";
 import recommended2 from "./recommended/offers02.png";
@@ -25,7 +23,6 @@ import FooterLogo from "./logo/NameKart - Logo.png";
 import AboutusImg1 from "./about-us/about1.jpg";
 import AboutusImg2 from "./about-us/about3.jpg";
 //Landing Page//
-import AboutImage from "./offers/landingPage-Img.webp";
 import FlightImg from "./offers/Image1.png";
 import HotelImg from "./offers/Image2.png";
 import TravelGuideImg from "./offers/Image3.png";
@@ -73,8 +70,6 @@ export {
   CallSupport,
   bannerImage,
   experienceBg,
-  Product01,
-  Product02,
   recommended1,
   recommended2,
   recommended3,
@@ -93,7 +88,6 @@ export {
   LowestImg,
   ExcImg,
   Support,
-  AboutImage,
   FlightImg,
   HotelImg,
   TravelGuideImg,
