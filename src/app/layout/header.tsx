@@ -1,8 +1,8 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
+import { useState, useEffect, memo } from "react";
 import { FooterLogo, Logo, PCCiIcon } from "../utils/images";
 
 const Header = () => {
@@ -114,4 +114,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default memo(Header);

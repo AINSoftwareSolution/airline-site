@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react';
+import { memo, useEffect, useRef, useState } from 'react';
 
 const Counter: React.FC = () => {
   const [tickets, setTickets] = useState<number>(0);
@@ -84,4 +84,4 @@ const Counter: React.FC = () => {
   );
 };
 
-export default Counter;
+export default memo(Counter);

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Caller } from '../utils/images'
@@ -23,4 +23,4 @@ const footerCall = () => {
     )
 }
 
-export default footerCall
+export default memo(footerCall);

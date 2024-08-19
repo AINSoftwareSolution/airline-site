@@ -1,5 +1,5 @@
  'use client'
- import React, { FormEvent, useEffect, useState } from "react";
+ import React, { FormEvent, memo, useEffect, useState } from "react";
 
 import Image from "next/image";
 import NewsImage from "../utils/images/icons/email-Img.png";
@@ -97,4 +97,4 @@ const NewsLetter: React.FC = () => {
   );
 };
 
-export default NewsLetter; 
+export default memo(NewsLetter); 

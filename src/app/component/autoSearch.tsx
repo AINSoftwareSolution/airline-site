@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from "react";
+import React, { memo, useState } from "react";
 import { AutoSearchProps } from "../utils/types";
 import { airportData } from '../utils/airport';
 
@@ -60,4 +60,4 @@ const AutoSearch: React.FC<AutoSearchProps> = ({ label, error, name, setFieldVal
     );
 }
 
-export default AutoSearch;
+export default memo(AutoSearch);

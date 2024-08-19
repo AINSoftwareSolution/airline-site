@@ -3,9 +3,9 @@ import { Inter } from "next/font/google";
 import { GoogleTagManager } from '@next/third-parties/google'
 
 
-import { FooterCall } from "./component";
 import CookieCard from "./layout/cookieCard";
 import Footer from "./layout/footer";
+import FooterCall from "./layout/footerCall";
 import Header from "./layout/header";
 
 import "./globals.css";

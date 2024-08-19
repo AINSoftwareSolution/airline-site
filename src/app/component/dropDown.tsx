@@ -1,6 +1,6 @@
 'use client'
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React, { memo, useState } from 'react';
 
 import { DropdownProps } from '../utils/types';
 
@@ -25,4 +25,4 @@ const Dropdown: React.FC<DropdownProps> = ({ title, items }) => {
     );
 }
 
-export default Dropdown;
+export default memo(Dropdown);
