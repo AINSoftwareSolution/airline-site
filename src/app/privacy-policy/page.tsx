@@ -1,7 +1,10 @@
 import React from 'react'
+import { Hero } from '../component'
 
 const Policy = () => {
   return (
+    <>
+    <Hero title="Privacy Policy"  description="" />       
     <div className="container mt-4">
       <div className="row">
         <h2 className="col text-center font-bold mb-4">Privacy Policy</h2>
@@ -121,9 +124,7 @@ While we take data security seriously and partner with reputable providers, we c
 
       </div>
     </div>
-
-
-
+    </>
   )
 }
 

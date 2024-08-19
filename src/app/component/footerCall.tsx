@@ -14,7 +14,7 @@ const footerCall = () => {
                     </figure>
                     <p className="flex-grow-1 ms-3 small mb-0 p-0 text-dark">For New Booking, Changes, Cancellation &amp; Last
                         minute deals Call us now save extra 25% off
-                        <span style={{ color: '#ec7e1b' }}>1888 5087143</span>
+                        <span style={{ color: '#ec7e1b' }}> 1888 5087143</span>
 
                     </p>
                 </span>

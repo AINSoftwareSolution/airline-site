@@ -53,7 +53,7 @@ const Offers = () => {
         style={{ backgroundImage: `url(${LandingBg.src})` }}
       >
         <div className="section__container">
-          <div className="row d-flex align-items-center py-4">
+          <div className="row d-flex align-items-center mt-4 py-4">
             <div className="col-md-6 d-flex justify-content-center align-items-center">
               <div className="bg-white border rounded rounded-3 shadow-sm overflow-hidden  p-4 p-xl-5">
                 <h1>Travel Smart, Travel Far</h1>

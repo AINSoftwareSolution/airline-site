@@ -115,7 +115,7 @@ const SearchEngine: React.FC<SearchEngineProps> = ({ handleToggle }) => {
                                                     <div className="d-flex small">Adults</div>
                                                     <div className="ms-auto input-group plus-minus-input">
                                                         <div className="input-group-button">
-                                                            <button type="button" className="circle"
+                                                            <button type="button"
                                                                 onClick={() => setFieldValue(`travelers.adults`, Math.max(0, values.travelers.adults - 1))}>
                                                                 <i className="bi bi-dash"></i>
                                                             </button>
@@ -125,7 +125,7 @@ const SearchEngine: React.FC<SearchEngineProps> = ({ handleToggle }) => {
                                                             value={values?.travelers.adults} readOnly
                                                         />
                                                         <div className="input-group-button">
-                                                            <button type="button" className="circle"
+                                                            <button type="button"
                                                                 onClick={() => setFieldValue(`travelers.adults`, values.travelers.adults + 1)} >
                                                                 <i className="bi bi-plus"></i>
                                                             </button>
@@ -136,7 +136,7 @@ const SearchEngine: React.FC<SearchEngineProps> = ({ handleToggle }) => {
                                                     <div className="d-flex small">Children</div>
                                                     <div className="ms-auto input-group plus-minus-input">
                                                         <div className="input-group-button">
-                                                            <button type="button" className="circle"
+                                                            <button type="button"
                                                                 onClick={() => setFieldValue(`travelers.children`, Math.max(0, values.travelers.children - 1))} >
                                                                 <i className="bi bi-dash"></i>
                                                             </button>
@@ -146,7 +146,7 @@ const SearchEngine: React.FC<SearchEngineProps> = ({ handleToggle }) => {
                                                             value={values?.travelers.children} readOnly
                                                         />
                                                         <div className="input-group-button">
-                                                            <button type="button" className="circle"
+                                                            <button type="button"
                                                                 onClick={() => setFieldValue(`travelers.children`, values.travelers.children + 1)}>
                                                                 <i className="bi bi-plus"></i>
                                                             </button>
@@ -157,7 +157,7 @@ const SearchEngine: React.FC<SearchEngineProps> = ({ handleToggle }) => {
                                                     <div className="d-flex small">Infants</div>
                                                     <div className="ms-auto input-group plus-minus-input">
                                                         <div className="input-group-button">
-                                                            <button type="button" className="circle"
+                                                            <button type="button"
                                                                 onClick={() => setFieldValue(`travelers.infants`, Math.max(0, values.travelers.infants - 1))}>
                                                                 <i className="bi bi-dash"></i>
                                                             </button>
@@ -167,7 +167,7 @@ const SearchEngine: React.FC<SearchEngineProps> = ({ handleToggle }) => {
                                                             value={values?.travelers.infants} readOnly
                                                         />
                                                         <div className="input-group-button">
-                                                            <button type="button" className="circle"
+                                                            <button type="button"
                                                                 onClick={() => setFieldValue(`travelers.infants`, values.travelers.infants + 1)}>
                                                                 <i className="bi bi-plus"></i>
                                                             </button>

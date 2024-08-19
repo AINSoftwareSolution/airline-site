@@ -12,7 +12,7 @@ const ThankYou = () => {
   return (
     <>
       <div className="d-flex justify-content-center align-items-center my-4">
-        <div>
+        <div className="mt-5">
           <div className="my-4 text-center theme-text-primary">
             <svg
               xmlns="http://www.w3.org/2000/svg"
