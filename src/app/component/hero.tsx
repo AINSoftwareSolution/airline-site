@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import {  OffersBg } from '../utils/images'
 import { Heroprops } from '../utils/types'
 
@@ -19,4 +19,4 @@ const Hero: React.FC<Heroprops> = (props) => {
     )
 }
 
-export default Hero
+export default memo(Hero)

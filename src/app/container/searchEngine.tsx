@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { memo, useState } from "react";
 import { useFormik } from "formik";
 import { usePathname } from "next/navigation";
 
@@ -317,4 +317,4 @@ const SearchEngine: React.FC<SearchEngineProps> = ({ handleToggle }) => {
     );
 }
 
-export default SearchEngine;
+export default  memo(SearchEngine);

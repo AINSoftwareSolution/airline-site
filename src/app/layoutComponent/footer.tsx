@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect, FormEvent } from "react";
+import { useState, useEffect, FormEvent, memo } from "react";
 
 import {
   SubscribeIcon,
@@ -224,4 +224,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default memo(Footer);

@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link';
-import React, { useState, useEffect } from 'react';
 import Cookies from 'js-cookie';
+import React, { useState, useEffect, memo } from 'react';
 
 const CookieCard = () => {
     const [cookieConsent, setCookieConsent] = useState(false);
@@ -56,4 +56,4 @@ const CookieCard = () => {
     );
 };
 
-export default CookieCard;
+export default memo(CookieCard);

@@ -1,10 +1,8 @@
 'use client'
 
-import React from "react";
+import React, { memo, useState} from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import "bootstrap/dist/css/bootstrap.min.css";
-import { useState } from "react";
 
 const validationSchema = Yup.object({
   amount: Yup.number()
@@ -351,4 +349,4 @@ const PaymentMethod = () => {
   );
 };
 
-export default PaymentMethod;
+export default memo(PaymentMethod);

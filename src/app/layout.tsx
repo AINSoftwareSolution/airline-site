@@ -1,15 +1,12 @@
+import Script from "next/script";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import { GoogleTagManager } from '@next/third-parties/google'
+import { Inter } from "next/font/google";
+import { Suspense } from "react";
+import { Loader, Header, CookieCard, FooterCall, Footer } from "./layoutComponent";
 
-
-import { FooterCall } from "./component";
-import CookieCard from "./layout/cookieCard";
-import Footer from "./layout/footer";
-import Header from "./layout/header";
 
 import "./globals.css";
-import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,7 +26,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning={true}>
       <head>
         <GoogleTagManager gtmId='AW-16615907817' />
-        <Script async src="https://www.googletagmanager.com/gtag/js?id=AW-16615907817 "></Script>
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=AW-16615907817"></Script>
         <Script
           id="gtag-init"
           strategy="afterInteractive"
@@ -53,11 +50,15 @@ export default function RootLayout({
             height="0" width="0" style={{ display: 'none', visibility: 'hidden' }}>
           </iframe>
         </noscript>
-        <Header />
-        {children}
-        <CookieCard />
-        <FooterCall />
-        <Footer />
+
+        <Suspense fallback={<Loader />}>
+          <Header />
+          {children}
+          <CookieCard />
+          <FooterCall />
+          <Footer />
+        </Suspense>
+
         <Script async src="https://api.cronbot.ai/v1/widgets/app/app_tilrrkroyu43"></Script>
       </body>
     </html>
