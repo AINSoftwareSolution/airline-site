@@ -2,7 +2,8 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import Loader from './layoutComponent/loader'; 
 
 import SearchEngine from "./container/searchEngine";
 import { CallModal } from "./component";
@@ -26,6 +27,23 @@ const Home = () => {
   const handleToggle = () => {
     setShow(!show);
   };
+
+  // loader //
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+   
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
+
+   
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return <Loader />;
+  }
 
   return (
     <main>
@@ -150,6 +168,7 @@ const Home = () => {
               </div>
             ))}
           </div>
+          
         </div>
       </section>
 
@@ -364,7 +383,9 @@ const Home = () => {
           </div>
         </div>
       </section>
-
+      
+      {/* LOader */}
+      
       {/* call us modal */}
       <CallModal show={show} handleClose={handleToggle} setShow={setShow} />
     </main>
