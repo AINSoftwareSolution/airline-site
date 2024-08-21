@@ -39,11 +39,13 @@ const CallModal: React.FC<Modalprops> = ({ show, handleClose, setShow, ispath = 
                   alt='reservationakrt.com'
                   src={CallSupport}
                   className="img-fluid d-block m-auto mb-3 rounded-circle" />
-                <Link href="tel:1888 5087143" className="d-block col-8 col-lg-4 m-auto mb-2 text-link text-link-effect border py-2">
+                  <br/>
+                <Link href="tel:1888 5087143" className="btn mb-2 text-link text-link-effect border py-2">
                   <span className="text-light p-2 fs-6">
                     <i className="bi bi-telephone me-1 fs-6"></i>Click to call
                   </span>
                 </Link>
+                <br/>
                 <Link href="tel:1888 5087143" className="mb-3 d-inline-block text-link text-link-effect">
                   <span className="text-light py-2 p-lg-2 fs-4">
                     <i className="bi bi-telephone me-2 fs-4"></i>1888 5087143</span>
