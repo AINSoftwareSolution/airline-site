@@ -94,7 +94,7 @@ const Home = () => {
                 className="col-12 col-md-6 col-xl-4 mb-3"
                 key={flights.arriving}
               >
-                <div className="card h-100 border-0 shadow-lg theme-bg-white theme-border-radius card-hover">
+                <div className="card h-100 border-0 shadow-lg theme-bg-white  card-hover">
                   <div className="card-body">
                     <h6 className="card-title fw-bold">
                       {flights.arriving}
