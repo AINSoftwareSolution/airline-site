@@ -64,6 +64,7 @@ import  RecomandationImage4 from "./recommended/london.jpeg"
 import  RecomandationImage5 from "./recommended/rec-img5.jpg"
 import  RecomandationImage6 from "./recommended/rome.jpeg"
 
+import LoaderImage from "./loader/loaderimg0.gif"
 
 export {
   
@@ -121,6 +122,7 @@ export {
   RecomandationImage4,
   RecomandationImage5,
   RecomandationImage6,
-  Caller
+  Caller,
+  LoaderImage
   
 };
