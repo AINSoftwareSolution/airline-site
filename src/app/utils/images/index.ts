@@ -18,7 +18,8 @@ import Caller from './icons/support-call.webp'
 import CallSupport from './icons/support-popup.webp'
 
 
-import Logo from "./logo/logo.png";
+import Logo from "./logo/travelocare-logo.png";
+
 import FooterLogo from "./logo/NameKart - Logo.png";
 import AboutusImg1 from "./about-us/about1.jpg";
 import AboutusImg2 from "./about-us/about3.jpg";
@@ -80,7 +81,7 @@ export {
   SubscribeIcon,
   AppleIcon,
   Logo,
-  FooterLogo,
+  // FooterLogo,
   PCCiIcon,
   AboutusImg1,
   AboutusImg2,

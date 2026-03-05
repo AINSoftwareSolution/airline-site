@@ -40,13 +40,14 @@ const Header = () => {
               alt="reservationkart-flight booking app"
               className="img-fluid me-2"
               height={50}
+              width={100}
             />
-            <Image
+            {/* <Image
               src={FooterLogo}
               alt="airoplan ticket booking"
               className="w-full"
               height={35}
-            />
+            /> */}
           </Link>
           <button
             className="navbar-toggler px-1 btn rounded-0"
@@ -91,9 +92,9 @@ const Header = () => {
                 <div>1888 5087143</div>
               </Link>
               <div className="img-fluid d-flex justify-content-center align-items-center">
-                <Link href="/compliance_certificate.pdf" target="_blank">
+                {/* <Link href="/compliance_certificate.pdf" target="_blank">
                   <Image src={PCCiIcon} alt="PCI DSS Certified" height={50} />
-                </Link>
+                </Link> */}
               </div>
               {/* <Dropdown title={<><i className="bi bi-globe me-2"></i>Eng</>} items={languageItems} />
               <Dropdown title="INR" items={currencyItems} />
